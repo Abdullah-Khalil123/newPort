@@ -3,13 +3,14 @@ import style from "./navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "@/assets/button";
-
+import dropdown from "@/public/dropdown.svg";
+import image from "@/public/Screenshot 2024-07-20 021155.png";
 const NavBar = () => {
   return (
     <div className={style.navbar}>
       <div className={style.navPaths}>
         <div className={style.logoImg}>
-          <Image src={""} fill alt={"logo"} />
+          <Image src={image} fill alt={"logo"} />
         </div>
         <div className={style.links}>
           <Link href={""}>Playground</Link>
@@ -20,19 +21,28 @@ const NavBar = () => {
       </div>
       <div className={style.bookings}>
         <div className={style.locAndTime}>
-          <p>Islamabad, Pakistan</p>
+          <p style={{ fontWeight: "bold" }}>Islamabad, Pakistan</p>
           <p>6:18:31 pm</p>
         </div>
         <Button
           text={"Slot Booked"}
-          styles={{ backgroundColor: "#f5f5f0", color: "#8f8f8e" }}
+          styles={{
+            backgroundColor: "var(--secondary-light)",
+            color: "#8f8f8e",
+          }}
         />
         <Button
           text={"Slot Booked"}
-          styles={{ backgroundColor: "#f5f5f0", color: "#8f8f8e" }}
+          styles={{
+            backgroundColor: "var(--secondary-light)",
+            color: "#8f8f8e",
+          }}
         />
         <Button text={"+"} />
       </div>
+      <button className={style.mobileDropDown}>
+        <Image src={dropdown} alt={""} fill />
+      </button>
     </div>
   );
 };

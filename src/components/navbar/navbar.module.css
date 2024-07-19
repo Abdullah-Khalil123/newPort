@@ -4,8 +4,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100px;
-    background-color: aqua;
+    height: 80px;
+    /* background-color: aqua; */
 }
 .navPaths {
     display: flex;
@@ -19,6 +19,15 @@
     align-items: center;
 
 }
+.links {
+    display: flex;
+    justify-content: space-around;
+    width: 40vw;
+}
+.locAndTime {
+    /* background-color: red; */
+    min-width: 170px;
+}
 .links a{
     margin-right: 10px;
 }
@@ -27,9 +36,44 @@
     width: 50px;
     background-color: red;
     position: relative;
-
+    border-radius: 50%;
+    overflow: hidden;
     margin-right: 10px;
 }
 .bookings button{
+
+    width: 120px;
+    padding: 10px 20px;
     margin-left: 10px;
+}
+.bookings button:last-child {
+    padding: 10px 15px;
+    width: min-content;
+}
+
+.mobileDropDown {
+    position: relative;
+    display: none;
+}
+
+@media screen and (max-width: 1000px){
+    .links {
+        display: none;
+    }
+    .bookings button{
+        display: none;
+    }
+    .navbar {
+        justify-content: start;
+    }
+    .mobileDropDown {
+        display: block;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        border: none;
+        margin-left: auto;
+        background-color: transparent;
+    }
+    
 }

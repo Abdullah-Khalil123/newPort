@@ -1,12 +1,15 @@
 import React from "react";
 import style from "./main.module.css";
 import Button from "@/assets/button";
-
+import image from "@/public/Screenshot 2024-07-20 021155.png";
+import Image from "next/image";
 const Home = () => {
   return (
     <div className={style.home}>
       <div className={style.profileHello}>
-        <div className={style.profileImageHolder}></div>
+        <div className={style.profileImageHolder}>
+          <Image src={image} alt={"profile"} fill />
+        </div>
         <h1>Hello! I'm Abdullah Khalil</h1>
       </div>
       <div className={style.talkSeeWork}>
@@ -20,9 +23,10 @@ const Home = () => {
           <Button
             text={"See my work"}
             styles={{
-              backgroundColor: "var(--grey-backgroundColor)",
-              // color: "black",
-              marginLeft: "30px",
+              backgroundColor: "white",
+              color: "black",
+              border: "var(--secondary-background) 1px solid",
+              marginLeft: "20px",
             }}
           />
         </div>

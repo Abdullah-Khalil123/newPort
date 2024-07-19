@@ -2,7 +2,8 @@
   --LR-Padding: 50px;
   --grey-backgroundColor: #464646;
   --grey-textColor: #8f8f8e;
-  --secondary-background: #5656e5; 
+  --secondary-background: rgba(219, 207, 176, 0.411); 
+  --secondary-light: rgba(229, 223, 208, 0.41); 
 }
 
 * {
