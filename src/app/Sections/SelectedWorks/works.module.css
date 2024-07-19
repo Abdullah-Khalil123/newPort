@@ -1,0 +1,23 @@
+.worksSelected {
+
+
+    /* temp */
+    min-height: 50vh;
+    /* temp */
+    padding:0px var(--LR-Padding);
+    background-color: var(--secondary-background);
+
+}
+.worksSelected .title {
+    text-align: center;
+    font-weight: 400;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.flexColumns {
+    
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
