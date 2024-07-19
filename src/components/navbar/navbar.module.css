@@ -1,0 +1,35 @@
+.navbar {
+    padding: 0px var(--LR-Padding);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    background-color: aqua;
+}
+.navPaths {
+    display: flex;
+    align-items: center;
+}
+.navPaths a {
+    font-weight: 60 0;
+}
+.bookings {
+    display: flex;
+    align-items: center;
+
+}
+.links a{
+    margin-right: 10px;
+}
+.logoImg {
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    position: relative;
+
+    margin-right: 10px;
+}
+.bookings button{
+    margin-left: 10px;
+}

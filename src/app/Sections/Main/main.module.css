@@ -1,0 +1,29 @@
+.home {
+    height: 70svh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px var(--LR-Padding);
+    /* background-color: red; */
+}
+
+.profileImageHolder {
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.profileHello {
+    padding-right: 30px;
+}
+
+@media screen and (max-width: 700px){
+    .home {
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+}
