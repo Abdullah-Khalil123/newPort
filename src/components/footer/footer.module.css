@@ -43,3 +43,12 @@
 #letsTalk {
     margin-bottom: 20px;
 }
+
+@media screen and (max-width: 750px){
+    .bottomNavLinks {
+        display: none;
+    }
+    .footNav {
+        justify-content: center;
+    }
+}

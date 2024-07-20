@@ -6,6 +6,8 @@
     justify-content: space-between;
     height: 80px;
     /* background-color: aqua; */
+
+    position: relative;
 }
 .navPaths {
     display: flex;
@@ -56,6 +58,30 @@
     display: none;
 }
 
+.socials {
+    position: absolute;
+    right: 0;
+    top: 140%;
+    right: 20px;
+}
+.circle {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    transition:scale 0.2s linear;
+    border: solid 1px rgb(207, 206, 206);
+}
+.circle:hover {
+    cursor: pointer;
+    scale: 1.1;
+}
 @media screen and (max-width: 1000px){
     .links {
         display: none;

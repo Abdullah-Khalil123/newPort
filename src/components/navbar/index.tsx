@@ -7,6 +7,11 @@ import dropdown from "@/public/dropdown.svg";
 import image from "@/public/Screenshot 2024-07-20 021155.png";
 import GetTime from "@/assets/time";
 
+import linkedIn from "@/public/linkedin-svgrepo-com.svg";
+import github from "@/public/github-svgrepo-com.svg";
+import insta from "@/public/insta-svgrepo-com.svg";
+import { link } from "fs";
+
 const NavBar = () => {
   return (
     <div className={style.navbar}>
@@ -46,8 +51,20 @@ const NavBar = () => {
       </div>
       <button className={style.mobileDropDown}>
         {/* <DropDown /> */}
-        <Image src={dropdown} alt={""} fill />
+        <Image src={dropdown} alt={""} width={25} />
       </button>
+
+      <div className={style.socials}>
+        <div className={style.circle}>
+          <Image src={insta} alt={""} width={30} />
+        </div>
+        <div className={style.circle}>
+          <Image src={linkedIn} alt={""} width={30} />
+        </div>
+        <div className={style.circle}>
+          <Image src={github} alt={""} width={30} />
+        </div>
+      </div>
     </div>
   );
 };
