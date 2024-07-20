@@ -6,7 +6,6 @@ import Button from "@/assets/button";
 import dropdown from "@/public/dropdown.svg";
 import image from "@/public/Screenshot 2024-07-20 021155.png";
 import GetTime from "@/assets/time";
-import DropDown from "@/assets/dropDown";
 
 const NavBar = () => {
   return (
