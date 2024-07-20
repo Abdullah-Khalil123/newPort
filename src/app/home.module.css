@@ -1,19 +1,5 @@
-.sqiggleHolder {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: -10px;
-
-    z-index: -1;
-}
-
-.pathsvg {
-
-    z-index: -1;
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    left: -20px;
-
-    /* stroke-dashoffset: 1530; */
-}
+/* .front {
+    overflow-y: hidden;
+    height: min-content;
+    height: 200vh;
+} */

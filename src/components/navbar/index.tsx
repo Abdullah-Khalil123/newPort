@@ -5,6 +5,9 @@ import Link from "next/link";
 import Button from "@/assets/button";
 import dropdown from "@/public/dropdown.svg";
 import image from "@/public/Screenshot 2024-07-20 021155.png";
+import GetTime from "@/assets/time";
+import DropDown from "@/assets/dropDown";
+
 const NavBar = () => {
   return (
     <div className={style.navbar}>
@@ -22,7 +25,9 @@ const NavBar = () => {
       <div className={style.bookings}>
         <div className={style.locAndTime}>
           <p style={{ fontWeight: "bold" }}>Islamabad, Pakistan</p>
-          <p>6:18:31 pm</p>
+          <p>
+            <GetTime />
+          </p>
         </div>
         <Button
           text={"Slot Booked"}
@@ -41,6 +46,7 @@ const NavBar = () => {
         <Button text={"+"} />
       </div>
       <button className={style.mobileDropDown}>
+        {/* <DropDown /> */}
         <Image src={dropdown} alt={""} fill />
       </button>
     </div>

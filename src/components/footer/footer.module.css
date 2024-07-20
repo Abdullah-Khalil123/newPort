@@ -1,0 +1,45 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px var(--LR-Padding) 20px var(--LR-Padding);
+}
+.footer button {
+    margin-bottom: 10px;
+}
+.localTimeBot {
+    display: flex;
+}
+.local {
+    margin-right: 10px;
+}
+.time {
+    font-weight: bold;
+}
+
+.footNav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footNav span {
+    width: 258px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bottomNavLinks a {
+    margin: 0px 10px;
+}
+.localTimeBot {
+    margin-bottom: 50px;
+    
+}
+
+#have {
+    margin-bottom: 10px;
+}
+#letsTalk {
+    margin-bottom: 20px;
+}

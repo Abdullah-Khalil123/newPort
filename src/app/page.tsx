@@ -1,8 +1,8 @@
-import React from "react";
 import Home from "./Sections/Main";
 import WorkingExperience from "./Sections/WorkingExperience";
-import style from "./home.module.css";
 import SelectedWorks from "./Sections/SelectedWorks";
+import Footer from "@/components/footer";
+import style from "./home.module.css";
 
 const Front = () => {
   return (
@@ -10,6 +10,7 @@ const Front = () => {
       <Home />
       <WorkingExperience />
       <SelectedWorks />
+      <Footer />
     </div>
   );
 };
