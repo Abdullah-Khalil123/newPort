@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div className={style.footer}>
       <p id={style.have}>Have a Project?</p>
-      <h1 id={style.letsTalk}>Let's talk with me</h1>
+      <h1 id={style.letsTalk}>Let&apos;s talk with me</h1>
       <Button text={"Talk with me"} />
       <span className={style.localTimeBot}>
         <p className={style.local}>My local time</p>

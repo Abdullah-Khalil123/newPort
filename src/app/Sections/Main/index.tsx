@@ -10,7 +10,7 @@ const Home = () => {
         <div className={style.profileImageHolder}>
           <Image src={image} alt={"profile"} fill />
         </div>
-        <h1>Hello! I'm Abdullah Khalil</h1>
+        <h1>Hello! I&apos;m Abdullah Khalil</h1>
       </div>
       <div className={style.talkSeeWork}>
         <h2>A Website designer based in Islamabad, Pakistan</h2>
