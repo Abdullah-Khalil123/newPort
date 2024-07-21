@@ -5,6 +5,8 @@
     border-radius: 20px;
     padding: 15px 15px;
     margin: 10px 0px;
+    transition: 0.2s linear;
+    /* cursor: pointer; */
 }
 
 .workImageHolder {
@@ -17,4 +19,8 @@
 
 .workBox button {
     margin-top: 10px;
+}
+
+.workBox:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }

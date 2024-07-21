@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef, useState } from "react";
 import style from "./navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,9 +11,28 @@ import GetTime from "@/assets/time";
 import linkedIn from "@/public/linkedin-svgrepo-com.svg";
 import github from "@/public/github-svgrepo-com.svg";
 import insta from "@/public/insta-svgrepo-com.svg";
-import { link } from "fs";
+import DropDown from "@/assets/dropDown";
 
 const NavBar = () => {
+  const dropDownRef = useRef<
+    React.LegacyRef<HTMLButtonElement> | undefined | any
+  >(null);
+
+  const [showDropDown, setshowDropDown] = useState(false);
+
+  const handleClickOutside = (event: { target: any }) => {
+    if (dropDownRef.current && !dropDownRef.current.contains(event.target)) {
+      setshowDropDown(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <div className={style.navbar}>
       <div className={style.navPaths}>
@@ -49,9 +69,17 @@ const NavBar = () => {
         />
         <Button text={"+"} />
       </div>
-      <button className={style.mobileDropDown}>
+      <button className={style.mobileDropDown} ref={dropDownRef}>
         {/* <DropDown /> */}
-        <Image src={dropdown} alt={""} width={25} />
+        <Image
+          src={dropdown}
+          alt={""}
+          width={25}
+          onClick={() => {
+            setshowDropDown((showDropDown) => !showDropDown);
+          }}
+        />
+        <DropDown active={showDropDown} />
       </button>
 
       <div className={style.socials}>
