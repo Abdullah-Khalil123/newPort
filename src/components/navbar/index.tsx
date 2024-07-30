@@ -21,8 +21,10 @@ const NavBar = () => {
   const [showDropDown, setshowDropDown] = useState(false);
 
   const handleClickOutside = (event: { target: any }) => {
-    if (dropDownRef.current && !dropDownRef.current.contains(event.target)) {
-      setshowDropDown(false);
+    if (dropDownRef.current) {
+      if (!dropDownRef.current.contains(event.target)) {
+        setshowDropDown(false);
+      }
     }
   };
 
@@ -70,7 +72,6 @@ const NavBar = () => {
         <Button text={"+"} />
       </div>
       <button className={style.mobileDropDown} ref={dropDownRef}>
-        {/* <DropDown /> */}
         <Image
           src={dropdown}
           alt={""}

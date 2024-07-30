@@ -24,3 +24,13 @@
 .workBox:hover {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
+
+.textTime {
+    color: var(--grey-textColor);
+}
+.workBox h3 {
+    font-weight: 600;
+}
+.workBox h1 {
+    font-weight: 500;
+}

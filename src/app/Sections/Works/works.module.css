@@ -1,0 +1,88 @@
+.works {
+    /* background-color: red; */
+    padding:20px var(--LR-Padding);
+}
+.alignEnd {
+    /* background-color: orange; */
+    display: flex;
+    justify-content: end;
+    margin-bottom: 20px;
+}
+.alignEnd h2 {
+    /* background-color: aqua; */
+    width: 60%;
+    max-width: 700px;
+    font-weight: 500;
+}
+
+.works span {
+    font-weight: 700;
+}
+
+.workItems {
+    /* background-color: red; */
+    min-width: 60%;
+}
+.itemDisplay {
+    display: flex;
+    justify-content: space-between;
+}
+.workItem {
+
+    max-width: 700px;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+    border-bottom: 1px solid var(--grey-backgroundColor);
+    min-height: 60px;
+    transition: 0.2s linear;
+    margin-bottom: 5px;
+}
+
+.workItem:hover {
+    background-color: rgb(184, 184, 184);
+    border-bottom: 1px transparent solid;
+    border-radius: 10px;
+}
+.workItem:hover button {
+    rotate: -35deg;
+}
+.workItem p {
+    font-size: 18px;
+}
+.workItem .year {
+    margin-right: 50px;
+}
+.workItem button {
+    background-color: transparent;
+    border: solid 1px black;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    margin-left: 50px;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.25s ease-in;
+}
+
+.workDisplay {
+    max-width: 400px;
+    margin-left: 30px;
+}
+
+.workDisplay .ImageHolder {
+    position: relative;
+    background-color: red;
+    height: 150px;
+    border-radius: 10px;
+}
+.workDisplay .bold {
+    font-weight: 500;
+    margin: 5px 0px;
+}
+
