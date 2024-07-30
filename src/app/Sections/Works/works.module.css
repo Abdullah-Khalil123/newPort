@@ -13,6 +13,7 @@
     width: 60%;
     max-width: 700px;
     font-weight: 500;
+    margin-bottom: 10px;
 }
 
 .works span {
@@ -30,12 +31,12 @@
 .workItem {
 
     max-width: 700px;
-
+    /* min-width: 500px; */
     display: flex;
     justify-content: space-between;
-    padding: 10px 5px;
+    padding: 15px 5px;
     border-bottom: 1px solid var(--grey-backgroundColor);
-    min-height: 60px;
+    min-height: 80px;
     transition: 0.2s linear;
     margin-bottom: 5px;
 }
@@ -49,7 +50,7 @@
     rotate: -35deg;
 }
 .workItem p {
-    font-size: 18px;
+    font-size: 20px;
 }
 .workItem .year {
     margin-right: 50px;
@@ -85,4 +86,22 @@
     font-weight: 500;
     margin: 5px 0px;
 }
+.ImageHolder {
+    overflow: hidden;
+}
 
+@media screen and (max-width: 800px){
+    .workDisplay {
+        display: none;
+    }
+    .workItems {
+        width: 100%;
+    }
+    .alignEnd {
+        justify-content: start;
+    }
+    .alignEnd h2 {
+        font-size: 20px;
+        width: 100%;
+    }
+}

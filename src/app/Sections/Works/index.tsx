@@ -1,6 +1,7 @@
 import style from "./works.module.css";
 import Image from "next/image";
 import arrow from "@/public/arrow.svg";
+import test from "@/public/Screenshot 2024-07-20 021155.png";
 
 const Works = () => {
   return (
@@ -39,7 +40,9 @@ function WorkItem() {
 function WorkDisplay() {
   return (
     <div className={style.workDisplay}>
-      <div className={style.ImageHolder}></div>
+      <div className={style.ImageHolder}>
+        <Image src={test} alt={""} fill />
+      </div>
       <p className={style.bold}>A Quiet Afternoon in the Countryside</p>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam quos
