@@ -104,4 +104,13 @@
         font-size: 20px;
         width: 100%;
     }
+    .workItem .year {
+        margin-right: 20px;
+    }
+    .workItem button {
+        margin-left: 20px;
+    }
+    .workItem p {
+        font-size: 16px;
+    }
 }
