@@ -1,6 +1,8 @@
 .working {
     background-color: var(--secondary-background);
     padding: 50px var(--LR-Padding);
+
+    position: relative;
 }
 .workExp {
 
@@ -11,7 +13,7 @@
 }
 .workImageHolder {
     height: 40px;
-    width: 40px;
+    min-width: 40px;
     background-color: red;
     border-radius: 50%; 
     margin-right: 20px;
@@ -21,9 +23,7 @@
 .workExp h3 {
     transition: transform 0.2s linear;
 }
-.workExp:hover h3 {
-    transform: translateX(10px);
-}
+
 .workExp:hover .workImageHolder {
     scale: 1.1;
 }

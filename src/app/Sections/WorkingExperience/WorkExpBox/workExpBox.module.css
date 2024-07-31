@@ -1,0 +1,28 @@
+.workBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    pointer-events: none;
+}
+
+.ImageHolderWork {
+
+    height: 200px;
+    width: 300px;
+    background-color: red;
+    position: relative;
+    
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.ImageHolderWork img {
+
+    transition: 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+    margin-bottom: -5px;
+
+    padding: 20px;
+    
+}
