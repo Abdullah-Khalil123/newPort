@@ -2,12 +2,17 @@
 import React, { useEffect, useRef, useState } from "react";
 import style from "./WorkingExp.module.css";
 import WorkExpBox from "./WorkExpBox";
-
+import Image from "next/image";
 import { StaticImageData } from "next/image";
 import gsap from "gsap";
+import building from "@/public/buildings-2-svgrepo-com.svg";
+import code from "@/public/code-svgrepo-com.svg";
+import debug from "@/public/debug-svgrepo-com.svg";
+import rocket from "@/public/rocket-svgrepo-com.svg";
 
 interface WorkExperProps {
   year: number;
+  icon: StaticImageData;
   title: string;
   description: string;
   technologies: string[];
@@ -19,11 +24,11 @@ interface WorkExperProps {
   duration?: string;
   event?: string;
   project?: string;
-  imgSrc?: StaticImageData;
 }
 
 const WorkExper: WorkExperProps[] = [
   {
+    icon: building,
     year: 2024,
     title: "Personal Budget Tracker",
     description:
@@ -37,6 +42,7 @@ const WorkExper: WorkExperProps[] = [
     link: "https://github.com/yourusername/personal-budget-tracker",
   },
   {
+    icon: code,
     year: 2023,
     title: "Open Source Contributor",
     description:
@@ -49,6 +55,7 @@ const WorkExper: WorkExperProps[] = [
     link: "https://github.com/opensourceproject/repository",
   },
   {
+    icon: debug,
     year: 2023,
     title: "Software Development Intern",
     organization: "Tech Innovators Inc.",
@@ -63,6 +70,7 @@ const WorkExper: WorkExperProps[] = [
     challenges: "",
   },
   {
+    icon: rocket,
     year: 2022,
     title: "Hackathon Winner",
     event: "CodeFest 2022",
@@ -129,6 +137,7 @@ const WorkingExperience = () => {
       <h1>Working Experience</h1>
       {WorkExper.map((work, index) => (
         <WorkExp
+          img={work.icon}
           key={index}
           item={work}
           setSelected={setSelectedBox}
@@ -148,7 +157,9 @@ const WorkExp = ({
   item,
   index,
   setSelected,
+  img,
 }: {
+  img: any;
   item: WorkExperProps;
   setSelected: React.Dispatch<
     React.SetStateAction<{ active: boolean; index: number }>
@@ -162,7 +173,9 @@ const WorkExp = ({
         setSelected({ active: true, index: index });
       }}
     >
-      <div className={style.workImageHolder}></div>
+      <div className={style.workImageHolder}>
+        <Image src={img} alt={""} fill />
+      </div>
       <div className={style.work}>
         <h3>{item.title}</h3>
         <p>{item.duration || item.outcome}</p>
