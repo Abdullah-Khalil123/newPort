@@ -21,6 +21,10 @@
 .profileHello {
     padding-right: 30px;
 }
+.profileHello h1{
+    font-size: 48px;
+    font-weight: 500;
+}
 
 @media screen and (max-width: 700px){
     .home {
@@ -30,5 +34,6 @@
     }
     .profileHello h1{
         margin-bottom: 20px;
+        font-size: 36px;
     }
 }
