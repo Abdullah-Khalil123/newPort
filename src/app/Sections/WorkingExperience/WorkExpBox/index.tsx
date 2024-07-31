@@ -47,10 +47,11 @@ const WorkExpBox = ({
       ref={containerRef}
     >
       <div className={style.ImageHolderWork}>
-        {imagesList.map((item) => (
+        {imagesList.map((item, indexImg) => (
           <Image
             src={item.image}
             alt={""}
+            key={indexImg}
             width={300}
             height={200}
             style={{

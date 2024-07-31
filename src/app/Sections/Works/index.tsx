@@ -26,7 +26,12 @@ const Works = ({ items }: { items: WorkItemProps[] }) => {
       <div className={style.itemDisplay}>
         <div className={style.workItems}>
           {items.map((item, index) => (
-            <WorkItem item={item} index={index} setSelected={setselectedItem} />
+            <WorkItem
+              item={item}
+              key={index}
+              index={index}
+              setSelected={setselectedItem}
+            />
           ))}
         </div>
         <WorkDisplay
