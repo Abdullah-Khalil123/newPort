@@ -78,6 +78,9 @@
     transition:scale 0.2s linear;
     border: solid 1px rgb(207, 206, 206);
 }
+.circle img {
+    transform: translateY(2px);
+}
 .circle:hover {
     cursor: pointer;
     scale: 1.1;

@@ -85,13 +85,31 @@ const NavBar = () => {
 
       <div className={style.socials}>
         <div className={style.circle}>
-          <Image src={insta} alt={""} width={30} />
+          <a
+            href="https://www.instagram.com/3157abdullah/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image src={insta} alt={""} width={30} />
+          </a>
         </div>
         <div className={style.circle}>
-          <Image src={linkedIn} alt={""} width={30} />
+          <a
+            href="https://www.linkedin.com/in/abdullah-k-b6083722b/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image src={linkedIn} alt={""} width={30} />
+          </a>
         </div>
         <div className={style.circle}>
-          <Image src={github} alt={""} width={30} />
+          <a
+            href="https://github.com/Abdullah-Khalil123"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image src={github} alt={""} width={30} />
+          </a>
         </div>
       </div>
     </div>

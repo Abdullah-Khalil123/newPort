@@ -5,7 +5,7 @@
 .alignEnd {
     /* background-color: orange; */
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     margin-bottom: 20px;
 }
 .alignEnd h2 {
@@ -72,10 +72,13 @@
 }
 
 .workDisplay {
+    min-width: 200px;
     max-width: 400px;
     margin-left: 30px;
 }
-
+.ItemDiscrip {
+    min-height: 200px;
+}
 .workDisplay .ImageHolder {
     position: relative;
     background-color: red;
@@ -83,11 +86,16 @@
     border-radius: 10px;
 }
 .workDisplay .bold {
-    font-weight: 500;
+    font-weight: 600;
     margin: 5px 0px;
+
+    white-space: nowrap;         /* Prevents the text from wrapping */
+    overflow: hidden;            /* Hides the overflowed text */
+    text-overflow: ellipsis;
 }
 .ImageHolder {
     overflow: hidden;
+    min-height: 200px;
 }
 
 @media screen and (max-width: 800px){
