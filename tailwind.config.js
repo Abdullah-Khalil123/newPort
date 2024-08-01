@@ -4,8 +4,8 @@ const { nextui } = require("@nextui-org/theme");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./node_modules/@nextui-org/theme/dist/components/(dropdown|menu|divider|popover|button|ripple|spinner).js",
-  ],
+    "./node_modules/@nextui-org/theme/dist/components/[object Object].js"
+],
   theme: {
     extend: {},
   },

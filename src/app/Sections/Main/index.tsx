@@ -25,7 +25,7 @@ const Home = () => {
             styles={{
               backgroundColor: "white",
               color: "black",
-              border: "var(--secondary-background) 1px solid",
+              border: "var(--primary-background) 1px solid",
               marginLeft: "20px",
             }}
           />

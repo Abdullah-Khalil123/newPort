@@ -1,6 +1,6 @@
-"use client";
 import Link from "next/link";
 import style from "./dropDown.module.css";
+import Toggle from "@/components/Toggle";
 
 const DropDown = ({ active }: { active: boolean }) => {
   return (
@@ -16,6 +16,9 @@ const DropDown = ({ active }: { active: boolean }) => {
       </li>
       <li>
         <Link href={""}>About</Link>
+      </li>
+      <li>
+        <Toggle />
       </li>
     </ul>
   );
