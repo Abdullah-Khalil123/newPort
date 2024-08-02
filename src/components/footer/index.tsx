@@ -8,7 +8,14 @@ const Footer = () => {
     <div className={style.footer}>
       <p id={style.have}>Have a Project?</p>
       <h1 id={style.letsTalk}>Let&apos;s talk with me</h1>
-      <Button text={"Talk with me"} />
+      <Button
+        text={"Talk with me"}
+        styles={{
+          backgroundColor: "white",
+          color: "black",
+          border: "1px solid black",
+        }}
+      />
       <span className={style.localTimeBot}>
         <p className={style.local}>My local time</p>
         <p className={style.time}>

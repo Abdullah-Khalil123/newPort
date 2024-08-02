@@ -14,17 +14,15 @@ const GetTime = () => {
   }, []);
 
   const formatTime = (date: Date) => {
-    let hours = date.getHours();
-    let minutes: any = date.getMinutes();
-    let seconds: any = date.getSeconds();
-    const ampm = hours >= 12 ? "PM" : "AM";
-
-    hours = hours % 12;
-    hours = hours ? hours : 12; // the hour '0' should be '12'
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
-
-    return `${hours}:${minutes}:${seconds} ${ampm}`;
+    // Convert the current time to Islamabad time
+    const options: Intl.DateTimeFormatOptions = {
+      timeZone: "Asia/Karachi",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+      hour12: true,
+    };
+    return new Intl.DateTimeFormat("en-US", options).format(date);
   };
 
   return <>{formatTime(time)}</>;

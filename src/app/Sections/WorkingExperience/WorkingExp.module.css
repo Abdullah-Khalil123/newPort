@@ -4,6 +4,7 @@
     padding: 50px var(--LR-Padding);
 
     position: relative;
+
 }
 .workExp {
 
@@ -27,4 +28,8 @@
 
 .workExp:hover .workImageHolder {
     scale: 1.1;
+}
+
+.work {
+    user-select: none;
 }
