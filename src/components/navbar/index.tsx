@@ -72,7 +72,7 @@ const NavBar = () => {
           }}
         />
         <div className={style.toggleNav}>
-          <Toggle />
+          <Toggle styles={{ fontSize: "12px", fontWeight: "500" }} />
         </div>
       </div>
       <button className={style.mobileDropDown} ref={dropDownRef}>

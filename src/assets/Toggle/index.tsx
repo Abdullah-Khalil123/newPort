@@ -1,5 +1,5 @@
 "use client";
-import { RefObject, useRef, useState } from "react";
+import { CSSProperties, RefObject, useRef, useState } from "react";
 import style from "./toggle.module.css";
 import gsap from "gsap";
 
@@ -23,7 +23,7 @@ function handleTheme(prevActive: boolean) {
   }
 }
 
-const Toggle = () => {
+const Toggle = ({ styles }: { styles?: CSSProperties }) => {
   const [isActive, setActive] = useState<boolean>(false);
   const boxRef = useRef<HTMLDivElement>(null);
   const theamModes = ["Dark Mode", "Light Mode"];
@@ -35,7 +35,7 @@ const Toggle = () => {
     });
   };
   return (
-    <div className={style.toggle}>
+    <div className={style.toggle} style={styles}>
       <div className={style.toggleButton} onClick={toggleActive}>
         <div className={style.smollBox} ref={boxRef}></div>
       </div>
