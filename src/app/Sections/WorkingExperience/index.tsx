@@ -124,16 +124,7 @@ const WorkingExperience = () => {
   }, []);
 
   return (
-    <div
-      className={style.working}
-      ref={workRef}
-      onMouseEnter={() => {
-        setSelectedBox({ active: true, index: selectedBox.index });
-      }}
-      onMouseLeave={() => {
-        setSelectedBox({ active: false, index: selectedBox.index });
-      }}
-    >
+    <div className={style.working} ref={workRef}>
       <h1>Working Experience</h1>
       {WorkExper.map((work, index) => (
         <WorkExp
@@ -171,6 +162,9 @@ const WorkExp = ({
       className={style.workExp}
       onMouseEnter={() => {
         setSelected({ active: true, index: index });
+      }}
+      onMouseLeave={() => {
+        setSelected({ active: false, index: index });
       }}
     >
       <div className={style.workImageHolder}>

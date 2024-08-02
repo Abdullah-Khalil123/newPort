@@ -1,4 +1,4 @@
-import { LegacyRef, RefAttributes } from "react";
+import { LegacyRef, RefAttributes, RefObject } from "react";
 import style from "./workExpBox.module.css";
 import Image from "next/image";
 import image1 from "@/public/ProjectImages/1.png";
@@ -29,7 +29,7 @@ const WorkExpBox = ({
 }: {
   index: number;
   active: boolean;
-  containerRef: LegacyRef<HTMLDivElement> | undefined;
+  containerRef: RefObject<HTMLDivElement>;
 }) => {
   const imagesList = [
     { image: image1, color: "#000000" },

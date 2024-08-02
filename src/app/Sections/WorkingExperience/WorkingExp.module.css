@@ -1,5 +1,5 @@
 .working {
-    overflow-x: hidden;
+    overflow: hidden;
     background-color: var(--secondary-background);
     padding: 50px var(--LR-Padding);
 
@@ -16,7 +16,6 @@
 .workImageHolder {
     height: 40px;
     min-width: 40px;
-    /* background-color: red; */
     border-radius: 50%; 
     margin-right: 20px;
     position: relative;
