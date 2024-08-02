@@ -24,9 +24,9 @@ function handleTheme(prevActive: boolean) {
 }
 
 const Toggle = () => {
-  const [isActive, setActive] = useState(false);
+  const [isActive, setActive] = useState<boolean>(false);
   const boxRef = useRef<HTMLDivElement>(null);
-  const theamModes = ["Light Mode", "Dark Mode"];
+  const theamModes = ["Dark Mode", "Light Mode"];
   const toggleActive = () => {
     setActive((prevActive) => {
       handleClick(boxRef, !prevActive);

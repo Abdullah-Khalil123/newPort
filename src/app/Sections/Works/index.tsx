@@ -87,7 +87,7 @@ function WorkDisplay({
 function WorkItemButton() {
   return (
     <button>
-      <Image src={arrow} alt={""} height={25} />
+      <Image className="svg" src={arrow} alt={""} height={25} />
     </button>
   );
 }

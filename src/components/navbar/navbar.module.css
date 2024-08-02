@@ -19,7 +19,6 @@
 .bookings {
     display: flex;
     align-items: center;
-
 }
 .links {
     display: flex;
@@ -44,7 +43,6 @@
 }
 .bookings button{
 
-    width: 120px;
     padding: 10px 20px;
     margin-left: 10px;
 }
@@ -103,5 +101,7 @@
         margin-left: auto;
         background-color: transparent;
     }
-    
+    .toggleNav {
+        display: none;
+    }
 }

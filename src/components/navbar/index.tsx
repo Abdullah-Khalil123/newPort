@@ -12,6 +12,7 @@ import linkedIn from "@/public/linkedin-svgrepo-com.svg";
 import github from "@/public/github-svgrepo-com.svg";
 import insta from "@/public/insta-svgrepo-com.svg";
 import DropDown from "@/assets/dropDown";
+import Toggle from "@/assets/Toggle";
 
 const NavBar = () => {
   const dropDownRef = useRef<
@@ -67,9 +68,12 @@ const NavBar = () => {
           styles={{
             backgroundColor: "var(--secondary-light)",
             color: "#8f8f8e",
+            marginRight: "10px",
           }}
         />
-        <Button text={"+"} />
+        <div className={style.toggleNav}>
+          <Toggle />
+        </div>
       </div>
       <button className={style.mobileDropDown} ref={dropDownRef}>
         <Image
