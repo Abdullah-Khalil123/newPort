@@ -1,6 +1,6 @@
 import Link from "next/link";
 import style from "./dropDown.module.css";
-import Toggle from "@/components/Toggle";
+import Toggle from "@/assets/Toggle";
 
 const DropDown = ({ active }: { active: boolean }) => {
   return (

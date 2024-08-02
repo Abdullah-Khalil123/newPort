@@ -7,19 +7,20 @@
   --grey-textColor: #8f8f8e;
 }
 
-.dark-mode {
-  --LR-Padding: 50px;
-
+[data-theme = "dark"] {
   --primary-background: #010409; 
   --secondary-background: #0d1117;
-
   --grey-backgroundColor: #363733;
-
   background-color: var(--primary-background);
   color: white;
 
-
 }
+
+
+[data-theme-svg = "dark"] {
+  filter: invert(100%);
+}
+
 
 * {
   margin: 0;

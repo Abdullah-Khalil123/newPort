@@ -11,6 +11,14 @@ function handleClick(ref: RefObject<HTMLDivElement>, isActive: boolean) {
   }
 }
 
+function handleSvgsTheme(prevActive: boolean) {
+  const svgs: HTMLCollectionOf<Element> =
+    document.getElementsByClassName("svg");
+  for (let i = 0; i < svgs.length; i++) {
+    svgs[i].setAttribute("data-theme-svg", !prevActive ? "dark" : "light");
+  }
+}
+
 const Toggle = () => {
   const [isActive, setActive] = useState(false);
   const boxRef = useRef<HTMLDivElement>(null);
@@ -18,6 +26,10 @@ const Toggle = () => {
   const toggleActive = () => {
     setActive((prevActive) => {
       handleClick(boxRef, !prevActive);
+      document
+        .querySelector("body")
+        ?.setAttribute("data-theme", !prevActive ? "dark" : "light");
+      handleSvgsTheme(prevActive);
       return !isActive;
     });
   };

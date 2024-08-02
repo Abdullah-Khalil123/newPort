@@ -73,6 +73,7 @@ const NavBar = () => {
       </div>
       <button className={style.mobileDropDown} ref={dropDownRef}>
         <Image
+          className="svg"
           src={dropdown}
           alt={""}
           width={25}
@@ -90,7 +91,7 @@ const NavBar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image src={insta} alt={""} width={30} />
+            <Image className="svg" src={insta} alt={""} width={30} />
           </a>
         </div>
         <div className={style.circle}>
@@ -99,7 +100,7 @@ const NavBar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image src={linkedIn} alt={""} width={30} />
+            <Image className="svg" src={linkedIn} alt={""} width={30} />
           </a>
         </div>
         <div className={style.circle}>
@@ -108,7 +109,7 @@ const NavBar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image src={github} alt={""} width={30} />
+            <Image className="svg" src={github} alt={""} width={30} />
           </a>
         </div>
       </div>

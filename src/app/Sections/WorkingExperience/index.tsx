@@ -168,7 +168,7 @@ const WorkExp = ({
       }}
     >
       <div className={style.workImageHolder}>
-        <Image src={img} alt={""} fill />
+        <Image className="svg" src={img} alt={""} fill />
       </div>
       <div className={style.work}>
         <h3>{item.title}</h3>
