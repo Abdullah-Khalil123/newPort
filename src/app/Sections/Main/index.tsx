@@ -13,7 +13,7 @@ const Home = () => {
         <h1>Hello! I&apos;m Abdullah Khalil</h1>
       </div>
       <div className={style.talkSeeWork}>
-        <h2>A Website designer based in Islamabad, Pakistan</h2>
+        <h2>A Web Developer based in Islamabad, Pakistan</h2>
         <p style={{ marginBottom: "30px" }}>
           Passionate creating great experience Digital Product
         </p>
