@@ -14,10 +14,10 @@ function handleClick(ref: RefObject<HTMLDivElement>, isActive: boolean) {
 const Toggle = () => {
   const [isActive, setActive] = useState(false);
   const boxRef = useRef<HTMLDivElement>(null);
-  const lightDark = ["Light Mode", "Dark Mode"];
+  const theamModes = ["Light Mode", "Dark Mode"];
   const toggleActive = () => {
-    setActive((isActive) => {
-      handleClick(boxRef, !isActive);
+    setActive((prevActive) => {
+      handleClick(boxRef, !prevActive);
       return !isActive;
     });
   };
@@ -26,7 +26,7 @@ const Toggle = () => {
       <div className={style.toggleButton} onClick={toggleActive}>
         <div className={style.smollBox} ref={boxRef}></div>
       </div>
-      <p>{isActive ? lightDark[0] : lightDark[1]}</p>
+      <p>{isActive ? theamModes[0] : theamModes[1]}</p>
     </div>
   );
 };

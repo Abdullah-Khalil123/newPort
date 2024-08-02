@@ -4,6 +4,7 @@
 }
 .toggle p {
     margin-left: 10px;
+    width: 0px;
 }
 .toggleButton {
     background-color: var(--grey-textColor);

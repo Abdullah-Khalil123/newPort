@@ -1,4 +1,5 @@
 .working {
+    overflow-x: hidden;
     background-color: var(--secondary-background);
     padding: 50px var(--LR-Padding);
 
