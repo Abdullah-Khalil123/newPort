@@ -15,7 +15,7 @@ const Archive = () => {
           <th className={style.linkTd}>Link</th>
         </tr>
         {projectData.map((project) => (
-          <tr className={style.tableRow}>
+          <tr className={style.tableRow} key={project.link}>
             <td className={style.year}>{project.year}</td>
             <td>
               <Link
@@ -28,7 +28,7 @@ const Archive = () => {
             </td>
             <td className={style.builtWith}>
               {project.builtWith.map((item) => (
-                <Chip text={item} />
+                <Chip text={item} key={item} />
               ))}
             </td>
             <td className={style.linkTd}>
