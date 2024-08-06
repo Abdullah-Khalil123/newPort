@@ -1,0 +1,75 @@
+.archive {
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  margin: 0px 70px;
+}
+.archive table {
+  border-collapse: collapse;
+}
+.tableRow {
+  /* padding: 10px 0px; */
+  border-bottom: solid 1px rgb(229, 231, 235);
+}
+
+.tableRow th,
+.tableRow td {
+  padding: 10px 15px;
+}
+.year {
+  color: var(--grey-textColor);
+}
+.links {
+  display: flex;
+  align-items: center;
+}
+.links a {
+  color: var(--grey-textColor);
+}
+.ImageHolder {
+  display: inline-block;
+  /* background-color: red; */
+  position: relative;
+  height: 20px;
+  width: 20px;
+  rotate: -35deg;
+}
+.links img {
+  transition: transform 0.1s linear;
+  filter: invert(50%);
+}
+.links:hover img {
+  transform: translateX(5px);
+}
+.links:hover a {
+  color: rgb(34, 88, 224);
+}
+.builtWith {
+  /* background-color: red; */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 750px) {
+  .built,
+  .builtWith {
+    display: none;
+  }
+  .archive {
+    margin: 0px 40px;
+  }
+}
+.linkonProject {
+  pointer-events: none;
+}
+@media screen and (max-width: 700px) {
+  .linkTd {
+    display: none;
+  }
+  .linkonProject {
+    pointer-events: all;
+  }
+  .linkonProject p {
+    width: 45vw;
+  }
+}

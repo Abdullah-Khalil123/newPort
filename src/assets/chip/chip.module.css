@@ -1,0 +1,13 @@
+.chip {
+  background-color: rgba(128, 128, 128, 0.859);
+  width: max-content;
+  padding: 4px 12px;
+  border-radius: 50px;
+  color: white;
+  /* display: inline; */
+  margin-right: 6px;
+  margin-bottom: 4px;
+}
+.chip p {
+  color: white;
+}

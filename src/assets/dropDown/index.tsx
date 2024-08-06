@@ -2,21 +2,32 @@ import Link from "next/link";
 import style from "./dropDown.module.css";
 import Toggle from "@/assets/Toggle";
 
-const DropDown = ({ active }: { active: boolean }) => {
+const DropDown = ({
+  active,
+  showDropDown,
+}: {
+  active: boolean;
+  showDropDown: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
   return (
-    <ul className={`${style.dropdown} ${active ? style.active : ""}`}>
-      <li>
-        <Link href={""}>Playground</Link>
-      </li>
-      <li>
-        <Link href={""}>Services</Link>
-      </li>
-      <li>
-        <Link href={""}>Case Studies</Link>
-      </li>
-      <li>
-        <Link href={""}>About</Link>
-      </li>
+    <ul
+      className={`${style.dropdown} ${active ? style.active : ""}`}
+      onClick={() => {
+        showDropDown(false);
+      }}
+    >
+      <Link href={"/archive"}>
+        <li>Playground</li>
+      </Link>
+      <Link href={""}>
+        <li>Services</li>
+      </Link>
+      <Link href={""}>
+        <li>Case Studies</li>
+      </Link>
+      <Link href={""}>
+        <li>About</li>
+      </Link>
       <li>
         <Toggle />
       </li>

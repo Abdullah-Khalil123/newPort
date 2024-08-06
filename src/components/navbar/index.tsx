@@ -7,7 +7,6 @@ import Button from "@/assets/button";
 import dropdown from "@/public/dropdown.svg";
 import image from "@/public/Screenshot 2024-07-20 021155.png";
 import GetTime from "@/assets/time";
-
 import linkedIn from "@/public/linkedin-svgrepo-com.svg";
 import github from "@/public/github-svgrepo-com.svg";
 import insta from "@/public/insta-svgrepo-com.svg";
@@ -40,10 +39,12 @@ const NavBar = () => {
     <div className={style.navbar}>
       <div className={style.navPaths}>
         <div className={style.logoImg}>
-          <Image src={image} fill alt={"logo"} />
+          <Link href={"/"}>
+            <Image src={image} fill alt={"logo"} />
+          </Link>
         </div>
         <div className={style.links}>
-          <Link href={""}>Playground</Link>
+          <Link href={"/archive"}>Playground</Link>
           <Link href={""}>Services</Link>
           <Link href={""}>Case Studies</Link>
           <Link href={""}>About me</Link>
@@ -85,7 +86,7 @@ const NavBar = () => {
             setshowDropDown((showDropDown) => !showDropDown);
           }}
         />
-        <DropDown active={showDropDown} />
+        <DropDown active={showDropDown} showDropDown={setshowDropDown} />
       </button>
 
       <div className={style.socials}>
