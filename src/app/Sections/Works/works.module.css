@@ -81,7 +81,7 @@
 }
 .workDisplay .ImageHolder {
     position: relative;
-    background-color: red;
+    background-color: var(--primary-background);
     height: 150px;
     border-radius: 10px;
 }

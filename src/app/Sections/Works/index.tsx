@@ -2,7 +2,7 @@
 import style from "./works.module.css";
 import Image from "next/image";
 import arrow from "@/public/arrow.svg";
-import test from "@/public/Screenshot 2024-07-20 021155.png";
+import test from "@/public/underConst.png";
 import { Dispatch, SetStateAction, useState } from "react";
 
 interface WorkItemProps {
