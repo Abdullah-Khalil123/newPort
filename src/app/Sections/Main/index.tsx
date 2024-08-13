@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./main.module.css";
 import Button from "@/assets/button";
-import image from "@/public/Screenshot 2024-07-20 021155.png";
+import image from "@/public/creative-minimalist-letter-ak-logo-600nw-1501334273.webp";
 import Image from "next/image";
 const Home = () => {
   return (

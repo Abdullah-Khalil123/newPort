@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "@/assets/button";
 import dropdown from "@/public/dropdown.svg";
-import image from "@/public/Screenshot 2024-07-20 021155.png";
+import image from "@/public/creative-minimalist-letter-ak-logo-600nw-1501334273.webp";
 import GetTime from "@/assets/time";
 import linkedIn from "@/public/linkedin-svgrepo-com.svg";
 import github from "@/public/github-svgrepo-com.svg";
