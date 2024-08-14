@@ -1,16 +1,18 @@
-import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
-import "./globals.css";
-import NavBar from "@/components/navbar";
+import type { Metadata } from 'next'
+import { DM_Sans } from 'next/font/google'
+import './globals.css'
+import NavBar from '@/components/navbar'
 
-const inter = DM_Sans({ subsets: ["latin"] });
+const inter = DM_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "Abdullah Khalil",
-};
+  title: 'Abdullah Khalil',
+  description:
+    'Abdullah Khalil - A passionate Computer Science graduate with expertise in web development, AI, and mobile applications. Skilled in MERN stack, Next.js, GSAP, and more. Explore my portfolio to see projects in AI-driven facial recognition, hotel booking management systems, and more innovative solutions.',
+}
 
 interface RootInterface {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 function RootLayout({ children }: Readonly<RootInterface>) {
   return (
@@ -20,7 +22,7 @@ function RootLayout({ children }: Readonly<RootInterface>) {
         {children}
       </body>
     </html>
-  );
+  )
 }
 
-export default RootLayout;
+export default RootLayout
