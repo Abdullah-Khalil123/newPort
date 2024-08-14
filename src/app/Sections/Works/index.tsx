@@ -1,25 +1,34 @@
-"use client";
-import style from "./works.module.css";
-import Image from "next/image";
-import arrow from "@/public/arrow.svg";
-import test from "@/public/underConst.png";
-import { Dispatch, SetStateAction, useState } from "react";
+'use client'
+import style from './works.module.css'
+import Image from 'next/image'
+import arrow from '@/public/arrow.svg'
+import test from '@/public/underConst.png'
+import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 
 interface WorkItemProps {
-  year: number;
-  title: string;
-  description: string;
-  imageSrc: string;
+  year: number
+  title: string
+  description: string
+  imageSrc: string
 }
 
 const Works = ({ items }: { items: WorkItemProps[] }) => {
-  const [selectedItem, setselectedItem] = useState(0);
+  const [selectedItem, setselectedItem] = useState(0)
+  useEffect(() => {
+    const svgs = document.getElementsByClassName('svg')
+    const theme = document.querySelector('body')?.getAttribute('data-theme')
 
+    if (theme == 'dark') {
+      for (let i = 0; i < svgs.length; i++) {
+        svgs[i].setAttribute('data-theme-svg', theme)
+      }
+    }
+  })
   return (
     <div className={style.works}>
       <div className={style.alignEnd}>
         <h2>
-          Code is a <span>pixel</span> that reflects our commitment to crafting{" "}
+          Code is a <span>pixel</span> that reflects our commitment to crafting{' '}
           <span>seamless</span> and <span>innovative</span> web experiences
         </h2>
       </div>
@@ -42,54 +51,54 @@ const Works = ({ items }: { items: WorkItemProps[] }) => {
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
 function WorkItem({
   item,
   index,
   setSelected,
 }: {
-  item: WorkItemProps;
-  index: number;
-  setSelected: Dispatch<SetStateAction<number>>;
+  item: WorkItemProps
+  index: number
+  setSelected: Dispatch<SetStateAction<number>>
 }) {
   return (
     <div
       className={style.workItem}
       onClick={() => {
-        setSelected(index);
-        console.log(index);
+        setSelected(index)
+        console.log(index)
       }}
     >
       <p className={style.year}>{item.year}</p>
       <p>{item.title}</p>
       <WorkItemButton />
     </div>
-  );
+  )
 }
 
 function WorkDisplay({
   itemDetail,
 }: {
-  itemDetail: { title: string; description: string; imageSrc?: string };
+  itemDetail: { title: string; description: string; imageSrc?: string }
 }) {
   return (
     <div className={style.workDisplay}>
       <div className={style.ImageHolder}>
-        <Image src={test} alt={""} fill />
+        <Image src={test} alt={''} fill />
       </div>
       <p className={style.bold}>{itemDetail.title}</p>
       <p className={style.ItemDiscrip}>{itemDetail.description}</p>
     </div>
-  );
+  )
 }
 function WorkItemButton() {
   return (
     <button>
-      <Image className="svg" src={arrow} alt={""} height={25} />
+      <Image className="svg" src={arrow} alt={''} height={25} />
     </button>
-  );
+  )
 }
 
-export default Works;
+export default Works
