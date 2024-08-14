@@ -20,7 +20,9 @@ const Home = () => {
         </p>
 
         <div>
-          <Button text={'Talk with me'} />
+          <Link href={'/contact'}>
+            <Button text={'Talk with me'} />
+          </Link>
           <Link href="/archive">
             <Button
               text={'See my work'}
