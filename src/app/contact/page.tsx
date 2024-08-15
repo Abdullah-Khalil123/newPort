@@ -1,13 +1,31 @@
-import React, { CSSProperties } from 'react'
+'use client'
+import React, { CSSProperties, useEffect } from 'react'
 import style from './contact.module.css'
 import Image from 'next/image'
 import github from '@/public/github-svgrepo-com.svg'
 import linkedIn from '@/public/linkedin-svgrepo-com.svg'
 import insta from '@/public/insta-svgrepo-com.svg'
-import { link } from 'fs'
 import Button from '@/assets/button'
 
 const ContactMe = () => {
+  useEffect(() => {
+    const prevActive = document
+      .querySelector('body')
+      ?.getAttribute('data-theme')
+
+    const inputs = document.getElementsByTagName('input')
+    if (prevActive) {
+      for (let i = 0; i < inputs.length; i++) {
+        inputs[i].style.color = 'white'
+      }
+      document.getElementsByTagName('textarea')[0].style.color = 'white'
+    } else {
+      for (let i = 0; i < inputs.length; i++) {
+        inputs[i].style.color = 'black'
+      }
+      document.getElementsByTagName('textarea')[0].style.color = 'black'
+    }
+  })
   return (
     <div className={style.ContactMe}>
       <div className={style.getInTouch}>
