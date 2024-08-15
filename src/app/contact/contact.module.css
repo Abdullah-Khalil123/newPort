@@ -1,0 +1,86 @@
+.ContactMe {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px var(--LR-Padding) 0 var(--LR-Padding);
+}
+.getInTouch {
+  margin-right: 30px;
+  background-color: red;
+  padding: 40px 30px;
+  border-radius: 10px;
+  background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+  color: white;
+  min-height: 70svh;
+}
+
+.getInTouch h3 {
+  margin-bottom: 20px;
+}
+
+.getInTouch section h4 {
+  margin-bottom: 5px;
+}
+
+.getInTouch section a {
+  margin-right: 5px;
+  border-bottom: 1px solid white;
+}
+
+.getInTouch section {
+  margin-bottom: 20px;
+}
+
+.ImageHolder {
+  position: relative;
+  margin-top: 10px;
+  height: 25px;
+  width: 25px;
+  filter: invert(100%);
+  margin-right: 10px;
+}
+.ImagesSocials {
+  display: flex;
+}
+
+#num {
+  border: none;
+}
+.forms {
+  /* background-color: red; */
+  min-width: 40%;
+}
+.input input {
+  box-sizing: border-box;
+  padding: 7px 10px;
+  border-radius: 5px;
+  border: solid 1px var(--grey-textColor);
+  width: 100%;
+  background-color: transparent;
+  margin-bottom: 10px;
+}
+
+.input p {
+  margin-bottom: 5px;
+}
+.input textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 60px;
+  resize: none;
+  border-radius: 5px;
+  border: solid 1px var(--grey-textColor);
+  padding: 7px 10px;
+  background-color: transparent;
+}
+
+.receiveInfo {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.receiveInfo input {
+  margin-top: 3px;
+  margin-right: 5px;
+}

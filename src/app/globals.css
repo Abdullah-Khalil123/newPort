@@ -1,26 +1,23 @@
 :root {
   --LR-Padding: 50px;
-  --primary-background: #f5f5f0; 
+  --primary-background: #f5f5f0;
   --secondary-background: #f5f5f0;
-  
+
   --grey-backgroundColor: #464646;
   --grey-textColor: #8f8f8e;
 }
 
-[data-theme = "dark"] {
-  --primary-background: #010409; 
+[data-theme='dark'] {
+  --primary-background: #010409;
   --secondary-background: #0d1117;
   --grey-backgroundColor: #363733;
   background-color: var(--primary-background);
   color: white;
-
 }
 
-
-[data-theme-svg = "dark"] {
+[data-theme-svg='dark'] {
   filter: invert(100%);
 }
-
 
 * {
   margin: 0;
@@ -37,8 +34,12 @@ body {
   overflow-x: hidden;
 }
 
-@media screen and (max-width: 800px){
+.flexItems {
+  display: flex;
+}
+
+@media screen and (max-width: 800px) {
   :root {
-  --LR-Padding: 30px;
+    --LR-Padding: 30px;
   }
 }
