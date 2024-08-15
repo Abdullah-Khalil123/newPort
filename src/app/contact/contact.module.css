@@ -11,6 +11,9 @@
   background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
   color: white;
   min-height: 70svh;
+  width: 40%;
+  min-width: 400px;
+  max-width: 500px;
 }
 
 .getInTouch h3 {
@@ -83,4 +86,16 @@
 .receiveInfo input {
   margin-top: 3px;
   margin-right: 5px;
+}
+
+@media screen and (max-width: 900px) {
+  .ContactMe {
+    flex-direction: column-reverse;
+  }
+
+  .getInTouch {
+    max-width: none;
+    width: 100%;
+    margin: 50px 0px;
+  }
 }

@@ -1,108 +1,112 @@
 .navbar {
-    padding: 0px var(--LR-Padding);
+  padding: 0px var(--LR-Padding);
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 80px;
-    /* background-color: aqua; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  /* background-color: aqua; */
 
-    position: relative;
+  position: relative;
 }
 .navPaths {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .navPaths a {
-    font-weight: 60 0;
+  font-weight: 60 0;
 }
 .bookings {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .links {
-    display: flex;
-    justify-content: space-around;
-    width: 30vw;
-    min-width: 400px;
+  display: flex;
+  justify-content: space-around;
+  width: 30vw;
+  min-width: 400px;
 }
 .locAndTime {
-    /* background-color: red; */
-    min-width: 170px;
+  /* background-color: red; */
+  min-width: 170px;
 }
-.links a{
-    margin-right: 10px;
+.links a {
+  margin-right: 10px;
 }
 .logoImg {
-    height: 50px;
-    width: 50px;
-    /* background-color: red; */
-    position: relative;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-right: 10px;
+  height: 50px;
+  width: 50px;
+  /* background-color: red; */
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
 }
-.bookings button{
-
-    padding: 10px 20px;
-    margin-left: 10px;
+.bookings button {
+  padding: 10px 20px;
+  margin-left: 10px;
 }
 .bookings button:last-child {
-    padding: 10px 15px;
-    width: min-content;
+  padding: 10px 15px;
+  width: min-content;
 }
 
 .mobileDropDown {
-    position: relative;
-    display: none;
+  position: relative;
+  display: none;
 }
 .socials {
-    position: absolute;
-    right: 0;
-    top: 140%;
-    right: 20px;
+  position: absolute;
+  right: 0;
+  top: 140%;
+  right: 20px;
 }
 .circle {
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-    margin-bottom: 10px;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    transition:scale 0.2s linear;
-    border: solid 1px rgb(207, 206, 206);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  transition: scale 0.2s linear;
+  border: solid 1px rgb(207, 206, 206);
 }
 .circle img {
-    transform: translateY(2px);
+  transform: translateY(2px);
 }
 .circle:hover {
-    cursor: pointer;
-    scale: 1.1;
+  cursor: pointer;
+  scale: 1.1;
 }
-@media screen and (max-width: 1000px){
-    .links {
-        display: none;
-    }
-    .bookings button{
-        display: none;
-    }
-    .navbar {
-        justify-content: start;
-    }
-    .mobileDropDown {
-        display: block;
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
-        border: none;
-        margin-left: auto;
-        background-color: transparent;
-    }
-    .toggleNav {
-        display: none;
-    }
+@media screen and (max-width: 1000px) {
+  .links {
+    display: none;
+  }
+  .bookings button {
+    display: none;
+  }
+  .navbar {
+    justify-content: start;
+  }
+  .mobileDropDown {
+    display: block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+    margin-left: auto;
+    background-color: transparent;
+  }
+  .toggleNav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .socials {
+    display: none;
+  }
 }

@@ -6,24 +6,19 @@ import github from '@/public/github-svgrepo-com.svg'
 import linkedIn from '@/public/linkedin-svgrepo-com.svg'
 import insta from '@/public/insta-svgrepo-com.svg'
 import Button from '@/assets/button'
+import { handleThemeChange } from './handleThemeChange'
 
 const ContactMe = () => {
   useEffect(() => {
-    const prevActive = document
-      .querySelector('body')
-      ?.getAttribute('data-theme')
-
-    const inputs = document.getElementsByTagName('input')
-    if (prevActive) {
-      for (let i = 0; i < inputs.length; i++) {
-        inputs[i].style.color = 'white'
+    handleThemeChange()
+    const socials = document.getElementById('socialsRef')
+    if (socials) {
+      socials.style.display = 'none'
+    }
+    return () => {
+      if (socials) {
+        socials.style.display = 'block'
       }
-      document.getElementsByTagName('textarea')[0].style.color = 'white'
-    } else {
-      for (let i = 0; i < inputs.length; i++) {
-        inputs[i].style.color = 'black'
-      }
-      document.getElementsByTagName('textarea')[0].style.color = 'black'
     }
   })
   return (
@@ -34,14 +29,38 @@ const ContactMe = () => {
         <section>
           <h4>Visit me</h4>
           <p>Come say hello at my freelancing profiles</p>
-          <a href="">Upwork</a>
-          <a href="">Fiverr</a>
+          <a
+            href="https://www.upwork.com/freelancers/abdullahk307"
+            target="_blank"
+          >
+            Upwork
+          </a>
+          <a href="https://www.fiverr.com/abdullahkhalil6" target="_blank">
+            Fiverr
+          </a>
         </section>
 
         <section>
           <h4>Chat with me</h4>
           <p>Im here to help</p>
-          <a href="">abdullah@gmail.com</a>
+          <a
+            href=""
+            onClick={(e) => {
+              e.preventDefault() // Prevent the default link behavior
+
+              const email = 'abdullah.khalil123321@gmail.com'
+              navigator.clipboard
+                .writeText(email)
+                .then(() => {
+                  alert('Email copied to clipboard!')
+                })
+                .catch((err) => {
+                  console.error('Failed to copy: ', err)
+                })
+            }}
+          >
+            abdullah.khalil123321@gmail.com
+          </a>
         </section>
 
         <section>
@@ -74,7 +93,13 @@ const ContactMe = () => {
 
 const Forms = () => {
   return (
-    <form action="" className={style.forms}>
+    <form
+      action=""
+      className={style.forms}
+      onSubmit={(e) => {
+        e.preventDefault()
+      }}
+    >
       <div className="flexItems">
         <Input
           title={'First Name'}

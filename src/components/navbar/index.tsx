@@ -89,7 +89,7 @@ const NavBar = () => {
         <DropDown active={showDropDown} showDropDown={setshowDropDown} />
       </button>
 
-      <div className={style.socials}>
+      <div className={style.socials} id="socialsRef">
         <div className={style.circle}>
           <a
             href="https://www.instagram.com/3157abdullah/"
