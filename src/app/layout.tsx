@@ -1,10 +1,8 @@
 import type { Metadata } from 'next'
-import { DM_Sans } from 'next/font/google'
+import { inter } from '@/app/layoutFont'
 import './globals.css'
 import NavBar from '@/components/navbar'
 import Provider from '../Providers/provider'
-
-const inter = DM_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   icons: ['/favicon.webp'],
