@@ -1,5 +1,5 @@
 'use client'
-import React, { CSSProperties, useEffect } from 'react'
+import React, { CSSProperties, useEffect, useState } from 'react'
 import style from './contact.module.css'
 import Image from 'next/image'
 import github from '@/public/github-svgrepo-com.svg'
@@ -7,6 +7,8 @@ import linkedIn from '@/public/linkedin-svgrepo-com.svg'
 import insta from '@/public/insta-svgrepo-com.svg'
 import Button from '@/assets/button'
 import { handleThemeChange } from './handleThemeChange'
+import { useMutation, useQuery } from 'react-query'
+import sendContact from '@/api/contactsApi'
 
 const ContactMe = () => {
   useEffect(() => {
@@ -21,6 +23,7 @@ const ContactMe = () => {
       }
     }
   })
+
   return (
     <div className={style.ContactMe}>
       <div className={style.getInTouch}>
@@ -91,38 +94,97 @@ const ContactMe = () => {
   )
 }
 
+interface contactDataInterface {
+  firstName: String
+  lastName: String
+  companyName: String
+  email: String
+  message: String
+  reciveInfo: boolean
+}
+
 const Forms = () => {
+  const [contactData, setcontactData] = useState<contactDataInterface>({
+    firstName: '',
+    lastName: '',
+    companyName: '',
+    email: '',
+    message: '',
+    reciveInfo: false,
+  })
+
+  const { mutateAsync: sendContactMutation } = useMutation({
+    mutationFn: sendContact,
+    onSuccess: () => {
+      // console.log('Data Sent Successfully')
+    },
+    onError: (error) => {
+      // console.error('Failed to Send Data:', error)
+    },
+  })
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    try {
+      await sendContactMutation(contactData)
+    } catch (error: any) {
+      // console.error('Submission Error:', error.message)
+    }
+  }
   return (
-    <form
-      action=""
-      className={style.forms}
-      onSubmit={(e) => {
-        e.preventDefault()
-      }}
-    >
+    <form action="" className={style.forms} onSubmit={handleSubmit}>
       <div className="flexItems">
         <Input
           title={'First Name'}
           placeholder={'Alex'}
           styles={{ marginRight: '20px', width: '100%' }}
+          required={true}
+          name="firstName"
+          onChange={setcontactData}
         />
         <Input
           title={'Last Name'}
           placeholder={'Regan'}
           styles={{ width: '100%' }}
+          name="lastName"
+          onChange={setcontactData}
         />
       </div>
-      <Input title={'Company Name'} placeholder={'Google'} />
-      <Input title={'Email'} placeholder={'abc@email.com'} />
+      <Input
+        title={'Company Name'}
+        placeholder={'Google'}
+        name="companyName"
+        onChange={setcontactData}
+      />
+      <Input
+        title={'Email'}
+        placeholder={'abc@email.com'}
+        required={true}
+        name="email"
+        onChange={setcontactData}
+      />
       <div className={style.input} style={{}}>
         <p>Message</p>
         <textarea
           name="message"
           placeholder="Tell us what i can help you with"
+          onChange={(e) => {
+            setcontactData({ ...contactData, message: e.target.value })
+          }}
         ></textarea>
       </div>
       <div className={style.receiveInfo}>
-        <input type="checkbox" />
+        <input
+          type="checkbox"
+          checked={contactData.reciveInfo}
+          onChange={(e) => {
+            setcontactData({
+              ...contactData,
+              reciveInfo: e.target.checked,
+            })
+          }}
+        />
+
         <p>
           I{"'"}d like to receive more information about this company. I
           understand and agree to the Privacy Policy
@@ -131,6 +193,9 @@ const Forms = () => {
       <Button
         text={'Send Message'}
         styles={{ width: '100%', backgroundColor: '#6f86d6', height: '40px' }}
+        onClick={() => {
+          // console.log('click')
+        }}
       />
     </form>
   )
@@ -141,16 +206,34 @@ const Input = ({
   placeholder,
   styles,
   type = 'text',
+  required = false,
+  onChange,
+  name,
 }: {
   title: string
   placeholder: string
   styles?: CSSProperties
   type?: string
+  required?: boolean
+  onChange?: React.Dispatch<React.SetStateAction<contactDataInterface>>
+  name: string
 }) => {
   return (
     <div className={style.input} style={styles}>
       <p>{title}</p>
-      <input type={type} placeholder={placeholder} />
+      <input
+        type={type}
+        placeholder={placeholder}
+        required={required}
+        onChange={(event) => {
+          if (onChange) {
+            onChange((prev) => ({
+              ...prev,
+              [name]: event.target.value,
+            }))
+          }
+        }}
+      />
     </div>
   )
 }

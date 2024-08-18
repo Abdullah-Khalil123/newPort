@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { DM_Sans } from 'next/font/google'
 import './globals.css'
 import NavBar from '@/components/navbar'
+import Provider from '../Providers/provider'
 
 const inter = DM_Sans({ subsets: ['latin'] })
 
@@ -19,7 +20,7 @@ function RootLayout({ children }: Readonly<RootInterface>) {
     <html lang="en">
       <body className={inter.className}>
         <NavBar />
-        {children}
+        <Provider>{children}</Provider>
       </body>
     </html>
   )

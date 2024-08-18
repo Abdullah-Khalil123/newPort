@@ -1,7 +1,6 @@
 'use client'
 import { CSSProperties, RefObject, useRef, useState } from 'react'
 import style from './toggle.module.css'
-import gsap from 'gsap'
 import { handleClick, handleTheme } from './togglehandler'
 
 const Toggle = ({ styles }: { styles?: CSSProperties }) => {
