@@ -9,6 +9,7 @@ import Button from '@/assets/button'
 import { handleThemeChange } from './handleThemeChange'
 import { useMutation } from 'react-query'
 import sendContact from '@/api/contactsApi'
+import { inter } from '../layoutFont'
 import toast, { Toaster } from 'react-hot-toast'
 
 const ContactMe = () => {
@@ -164,6 +165,7 @@ const Forms = () => {
       <div className={style.input} style={{}}>
         <p>Message</p>
         <textarea
+          className={`${inter.className}`}
           name="message"
           placeholder="Tell us what i can help you with"
           onChange={(e) => {
