@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 
 const GetTime = () => {
-  const [time, setTime] = useState(new Date())
+  const [time, setTime] = useState<Date | undefined>()
 
   useEffect(() => {
     const timerId = setInterval(() => {
@@ -13,7 +13,7 @@ const GetTime = () => {
     return () => clearInterval(timerId)
   }, [])
 
-  const formatTime = (date: Date) => {
+  const formatTime = (date: Date | undefined) => {
     // Convert the current time to Islamabad time
     const options: Intl.DateTimeFormatOptions = {
       timeZone: 'Asia/Karachi',
