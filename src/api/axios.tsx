@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 // Access the environment variable with REACT_APP_ prefix
-const baseURL = process.env.NEXT_PUBLIC_API_BASE_URI
+const baseURL = process.env.REACT_APP_API_BASE_URI
 if (!baseURL) {
   console.error('Environment variable REACT_APP_API_BASE_URI is not defined')
 }
