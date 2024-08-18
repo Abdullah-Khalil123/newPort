@@ -1,11 +1,8 @@
-import axios from 'axios'
+import axios from './axios'
 
 const sendContact = async (contactData: any) => {
   try {
-    const response = await axios.post(
-      'http://localhost:4000/contact',
-      contactData
-    )
+    const response = await axios.post(`/contact`, contactData)
 
     if (response.status === 500) {
       throw new Error('Failed with Server Code 500')
