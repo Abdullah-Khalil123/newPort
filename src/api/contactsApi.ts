@@ -4,8 +4,8 @@ const sendContact = async (contactData: any) => {
   try {
     const response = await axios.post(`/contact`, contactData)
 
-    if (response.status === 500) {
-      throw new Error('Failed with Server Code 500')
+    if (response.status === 201) {
+      throw new Error('Duplicate Entry')
     }
 
     if (response.status < 200 || response.status >= 300) {
@@ -13,9 +13,13 @@ const sendContact = async (contactData: any) => {
     }
 
     return response.data
-  } catch (e: any) {
-    // console.error('Error Sending Request:', e.response.data)
-    throw e
+  } catch (error: any) {
+    if (error.message === 'Duplicate Entry') {
+      return Promise.reject(new Error('This entry already exists.'))
+    }
+    return Promise.reject(
+      new Error('An error occurred while sending the message.')
+    )
   }
 }
 

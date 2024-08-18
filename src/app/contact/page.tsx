@@ -7,8 +7,9 @@ import linkedIn from '@/public/linkedin-svgrepo-com.svg'
 import insta from '@/public/insta-svgrepo-com.svg'
 import Button from '@/assets/button'
 import { handleThemeChange } from './handleThemeChange'
-import { useMutation, useQuery } from 'react-query'
+import { useMutation } from 'react-query'
 import sendContact from '@/api/contactsApi'
+import toast, { Toaster } from 'react-hot-toast'
 
 const ContactMe = () => {
   useEffect(() => {
@@ -26,6 +27,7 @@ const ContactMe = () => {
 
   return (
     <div className={style.ContactMe}>
+      <Toaster />
       <div className={style.getInTouch}>
         <h3>Get in touch</h3>
 
@@ -115,21 +117,17 @@ const Forms = () => {
 
   const { mutateAsync: sendContactMutation } = useMutation({
     mutationFn: sendContact,
-    onSuccess: () => {
-      // console.log('Data Sent Successfully')
-    },
-    onError: (error) => {
-      // console.error('Failed to Send Data:', error)
-    },
   })
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     try {
-      await sendContactMutation(contactData)
-    } catch (error: any) {
-      // console.error('Submission Error:', error.message)
-    }
+      toast.promise(sendContactMutation(contactData), {
+        loading: 'Saving...',
+        success: <b>Message Sent</b>,
+        error: <b>We heared you</b>,
+      })
+    } catch (error: any) {}
   }
   return (
     <form action="" className={style.forms} onSubmit={handleSubmit}>
@@ -193,9 +191,7 @@ const Forms = () => {
       <Button
         text={'Send Message'}
         styles={{ width: '100%', backgroundColor: '#6f86d6', height: '40px' }}
-        onClick={() => {
-          // console.log('click')
-        }}
+        onClick={() => {}}
       />
     </form>
   )
