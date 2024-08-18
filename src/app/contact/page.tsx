@@ -1,5 +1,5 @@
 'use client'
-import React, { CSSProperties, useEffect, useState } from 'react'
+import React, { CSSProperties, useEffect, useRef, useState } from 'react'
 import style from './contact.module.css'
 import Image from 'next/image'
 import github from '@/public/github-svgrepo-com.svg'
@@ -114,7 +114,7 @@ const Forms = () => {
     message: '',
     reciveInfo: false,
   })
-
+  const checkBoxRef = useRef<HTMLInputElement>(null)
   const { mutateAsync: sendContactMutation } = useMutation({
     mutationFn: sendContact,
   })
@@ -175,6 +175,7 @@ const Forms = () => {
         <input
           type="checkbox"
           checked={contactData.reciveInfo}
+          ref={checkBoxRef}
           onChange={(e) => {
             setcontactData({
               ...contactData,
@@ -183,7 +184,13 @@ const Forms = () => {
           }}
         />
 
-        <p>
+        <p
+          onClick={() => {
+            if (checkBoxRef.current) {
+              checkBoxRef.current.checked = !checkBoxRef.current.checked
+            }
+          }}
+        >
           I{"'"}d like to receive more information about this company. I
           understand and agree to the Privacy Policy
         </p>
