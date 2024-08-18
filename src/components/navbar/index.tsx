@@ -40,7 +40,7 @@ const NavBar = () => {
       <div className={style.navPaths}>
         <div className={style.logoImg}>
           <Link href={'/'}>
-            <Image src={image} fill alt={'logo'} />
+            <Image src={image} fill alt={'logo'} sizes="" />
           </Link>
         </div>
         <div className={style.links}>
