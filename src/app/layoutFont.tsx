@@ -1,2 +1,2 @@
-import { Lexend_Deca } from 'next/font/google'
-export const inter = Lexend_Deca({ subsets: ['latin'] })
+import { Nunito_Sans } from 'next/font/google'
+export const inter = Nunito_Sans({ subsets: ['latin'], weight: ['400', '600'] })
