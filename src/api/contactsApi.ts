@@ -2,7 +2,6 @@ import axios from './axios'
 
 const sendContact = async (contactData: any) => {
   try {
-    console.log(axios.getUri())
     const response = await axios.post(`/contact`, contactData)
 
     if (response.status === 500) {
