@@ -1,27 +1,30 @@
 .toggle {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  /* width 180% due to margin not allowing full covarge of the Li element */
+  width: 180%;
+  /*  */
 }
 .toggle p {
-    margin-left: 10px;
-    width: 0px;
+  margin-left: 10px;
+  width: 0px;
 }
 .toggleButton {
-    background-color: var(--grey-textColor);
-    height: 25px;
-    width: 50px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+  background-color: var(--grey-textColor);
+  height: 25px;
+  width: 50px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .smollBox {
-    height: 18px;
-    width: 20px;
-    background-color: #18181b;
-    margin: 0px 3px;
-    border-radius: 3px;
+  height: 18px;
+  width: 20px;
+  background-color: #18181b;
+  margin: 0px 3px;
+  border-radius: 3px;
 }
 
 /* .active {

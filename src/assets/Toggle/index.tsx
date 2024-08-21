@@ -15,8 +15,8 @@ const Toggle = ({ styles }: { styles?: CSSProperties }) => {
     })
   }
   return (
-    <div className={style.toggle} style={styles}>
-      <div className={style.toggleButton} onClick={toggleActive}>
+    <div className={style.toggle} style={styles} onClick={toggleActive}>
+      <div className={style.toggleButton}>
         <div className={style.smollBox} ref={boxRef}></div>
       </div>
       <p>{isActive ? theamModes[0] : theamModes[1]}</p>
