@@ -126,7 +126,7 @@ const Forms = () => {
       toast.promise(sendContactMutation(contactData), {
         loading: 'Sending...',
         success: <b>Message Sent</b>,
-        error: <b>Already Sent Once!</b>,
+        error: <b>Already Sent!</b>,
       })
     } catch (error: any) {}
   }
