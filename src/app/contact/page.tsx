@@ -11,6 +11,7 @@ import { useMutation } from 'react-query'
 import sendContact from '@/api/contactsApi'
 import { inter } from '../layoutFont'
 import toast, { Toaster } from 'react-hot-toast'
+import Link from 'next/link'
 
 const ContactMe = () => {
   useEffect(() => {
@@ -81,13 +82,28 @@ const ContactMe = () => {
           <h4>Social media</h4>
           <div className={style.ImagesSocials}>
             <div className={style.ImageHolder}>
-              <Image src={insta} alt={''} fill />
+              <Link
+                href={'https://www.instagram.com/3157abdullah/'}
+                target="blank"
+              >
+                <Image src={insta} alt={''} fill />
+              </Link>
             </div>
             <div className={style.ImageHolder}>
-              <Image src={github} alt={''} fill />
+              <Link
+                href={'https://github.com/abdullah-Khalil123'}
+                target="blank"
+              >
+                <Image src={github} alt={''} fill />
+              </Link>
             </div>
             <div className={style.ImageHolder}>
-              <Image src={linkedIn} alt={''} fill />
+              <Link
+                href={'https://www.linkedin.com/in/abdullah-k-b6083722b/'}
+                target="blank"
+              >
+                <Image src={linkedIn} alt={''} fill />
+              </Link>
             </div>
           </div>
         </div>
