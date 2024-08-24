@@ -6,6 +6,8 @@ import style from './home.module.css'
 import Works from './Sections/Works'
 import horizon from '@/public/WorkImages/horizon.png'
 import elysium from '@/public/WorkImages/elysium.png'
+import conways from '@/public/WorkImages/conway.png'
+import indoor from '@/public/WorkImages/indoor.png'
 const WorkItems = [
   {
     year: 2023,
@@ -26,14 +28,14 @@ const WorkItems = [
     title: 'Indoor Positioning System using Flutter',
     description:
       'An indoor positioning system using Bluetooth Low Energy (BLE) beacons, developed with Flutter. It calculates distances based on RSSI and provides real-time updates.',
-    imageSrc: undefined,
+    imageSrc: indoor,
   },
   {
     year: 2023,
     title: 'Conways Game of Life',
     description:
       "A project based on Conway's Game of Life, developed for the Design and Analysis of Algorithms course. It showcases algorithmic design and optimization techniques.",
-    imageSrc: undefined,
+    imageSrc: conways,
   },
 ]
 
