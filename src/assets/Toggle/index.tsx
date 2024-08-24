@@ -1,10 +1,12 @@
 'use client'
-import { CSSProperties, RefObject, useRef, useState } from 'react'
+import { CSSProperties, RefObject, useEffect, useRef, useState } from 'react'
 import style from './toggle.module.css'
 import { handleClick, handleTheme } from './togglehandler'
 
 const Toggle = ({ styles }: { styles?: CSSProperties }) => {
-  const [isActive, setActive] = useState<boolean>(false)
+  const [isActive, setActive] = useState<boolean>(
+    document.querySelector('body')?.getAttribute('data-theme') == 'dark'
+  )
   const boxRef = useRef<HTMLDivElement>(null)
   const theamModes = ['Dark Mode', 'Light Mode']
   const toggleActive = () => {
@@ -14,6 +16,8 @@ const Toggle = ({ styles }: { styles?: CSSProperties }) => {
       return !isActive
     })
   }
+
+  useEffect(() => {})
   return (
     <div className={style.toggle} style={styles} onClick={toggleActive}>
       <div className={style.toggleButton}>
