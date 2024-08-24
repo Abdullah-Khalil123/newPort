@@ -1,9 +1,9 @@
-import Chip from "@/assets/chip";
-import style from "./archive.module.css";
-import { projectData } from "./staticData";
-import Image from "next/image";
-import arrow from "@/public/arrow.svg";
-import Link from "next/link";
+import Chip from '@/assets/chip'
+import style from './archive.module.css'
+import { projectData } from './staticData'
+import Image from 'next/image'
+import arrow from '@/public/arrow.svg'
+import Link from 'next/link'
 const Archive = () => {
   return (
     <div className={style.archive}>
@@ -19,7 +19,7 @@ const Archive = () => {
             <td className={style.year}>{project.year}</td>
             <td>
               <Link
-                href={project.link}
+                href={project.link ? project.link : ''}
                 target="_blank"
                 className={style.linkonProject}
               >
@@ -33,19 +33,21 @@ const Archive = () => {
             </td>
             <td className={style.linkTd}>
               <div className={style.links}>
-                <Link href={project.link} target="_blank">
-                  {project.link.replace("https://", "")}
+                <Link href={project.link ? project.link : ''} target="_blank">
+                  {project.link ? project.link.replace('https://', '') : ''}
                 </Link>
-                <div className={style.ImageHolder}>
-                  <Image src={arrow} fill alt={"arrow"} />
-                </div>
+                {project.link ? (
+                  <div className={style.ImageHolder}>
+                    <Image src={arrow} fill alt={'arrow'} />
+                  </div>
+                ) : null}
               </div>
             </td>
           </tr>
         ))}
       </table>
     </div>
-  );
-};
+  )
+}
 
-export default Archive;
+export default Archive
