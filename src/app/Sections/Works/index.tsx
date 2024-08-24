@@ -1,6 +1,6 @@
 'use client'
 import style from './works.module.css'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import arrow from '@/public/arrow.svg'
 import test from '@/public/underConst.png'
 import { Dispatch, SetStateAction, useEffect, useState } from 'react'
@@ -9,7 +9,7 @@ interface WorkItemProps {
   year: number
   title: string
   description: string
-  imageSrc: string
+  imageSrc: StaticImageData | string | undefined
 }
 
 const Works = ({ items }: { items: WorkItemProps[] }) => {
@@ -47,6 +47,7 @@ const Works = ({ items }: { items: WorkItemProps[] }) => {
           itemDetail={{
             title: items[selectedItem].title,
             description: items[selectedItem].description,
+            imageSrc: items[selectedItem].imageSrc,
           }}
         />
       </div>
@@ -81,12 +82,21 @@ function WorkItem({
 function WorkDisplay({
   itemDetail,
 }: {
-  itemDetail: { title: string; description: string; imageSrc?: string }
+  itemDetail: {
+    title: string
+    description: string
+    imageSrc?: string | StaticImageData
+  }
 }) {
   return (
     <div className={style.workDisplay}>
       <div className={style.ImageHolder}>
-        <Image src={test} alt={''} fill />
+        <Image
+          src={itemDetail.imageSrc ? itemDetail.imageSrc : test}
+          alt={''}
+          fill
+          objectFit="cover"
+        />
       </div>
       <p className={style.bold}>{itemDetail.title}</p>
       <p className={style.ItemDiscrip}>{itemDetail.description}</p>

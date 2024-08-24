@@ -1,38 +1,38 @@
-import Link from "next/link";
-import style from "./dropDown.module.css";
-import Toggle from "@/assets/Toggle";
+import Link from 'next/link'
+import style from './dropDown.module.css'
+import Toggle from '@/assets/Toggle'
 
 const DropDown = ({
   active,
   showDropDown,
 }: {
-  active: boolean;
-  showDropDown: React.Dispatch<React.SetStateAction<boolean>>;
+  active: boolean
+  showDropDown: React.Dispatch<React.SetStateAction<boolean>>
 }) => {
   return (
     <ul
-      className={`${style.dropdown} ${active ? style.active : ""}`}
+      className={`${style.dropdown} ${active ? style.active : ''}`}
       onClick={() => {
-        showDropDown(false);
+        showDropDown(false)
       }}
     >
-      <Link href={"/archive"}>
+      <Link href={'/archive'}>
         <li>Playground</li>
       </Link>
-      <Link href={""}>
+      <Link href={''}>
         <li>Services</li>
       </Link>
-      <Link href={""}>
+      <Link href={''}>
         <li>Case Studies</li>
       </Link>
-      <Link href={""}>
+      <Link href={''}>
         <li>About</li>
       </Link>
-      <li>
+      <li onClick={() => {}}>
         <Toggle />
       </li>
     </ul>
-  );
-};
+  )
+}
 
-export default DropDown;
+export default DropDown
