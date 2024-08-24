@@ -17,16 +17,16 @@ const Toggle = ({ styles }: { styles?: CSSProperties }) => {
     })
   }
 
-  useEffect(() => {
-    // Check the user's system preference
-    const userPrefersDark =
-      window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches
+  // useEffect(() => {
+  //   // Check the user's system preference
+  //   const userPrefersDark =
+  //     window.matchMedia &&
+  //     window.matchMedia('(prefers-color-scheme: dark)').matches
 
-    handleTheme(!userPrefersDark)
-    handleClick(boxRef, userPrefersDark)
-    setActive(userPrefersDark)
-  }, [])
+  //   handleTheme(!userPrefersDark)
+  //   handleClick(boxRef, userPrefersDark)
+  //   setActive(userPrefersDark)
+  // }, [])
   return (
     <div className={style.toggle} style={styles} onClick={toggleActive}>
       <div className={style.toggleButton}>
