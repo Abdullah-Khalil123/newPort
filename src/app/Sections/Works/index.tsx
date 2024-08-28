@@ -69,7 +69,6 @@ function WorkItem({
       className={style.workItem}
       onClick={() => {
         setSelected(index)
-        console.log(index)
       }}
     >
       <p className={style.year}>{item.year}</p>
