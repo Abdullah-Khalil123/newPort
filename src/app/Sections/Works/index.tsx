@@ -15,13 +15,10 @@ interface WorkItemProps {
 const Works = ({ items }: { items: WorkItemProps[] }) => {
   const [selectedItem, setselectedItem] = useState(0)
   useEffect(() => {
-    const svgs = document.getElementsByClassName('svg')
-    const theme = document.querySelector('body')?.getAttribute('data-theme')
-
-    if (theme == 'dark') {
-      for (let i = 0; i < svgs.length; i++) {
-        svgs[i].setAttribute('data-theme-svg', theme)
-      }
+    const theme = document.body.getAttribute('data-theme')
+    if (theme === 'dark') {
+      const svgs = document.querySelectorAll('.svg')
+      svgs.forEach((svg) => svg.setAttribute('data-theme-svg', theme))
     }
   }, [])
   return (
