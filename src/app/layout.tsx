@@ -5,7 +5,7 @@ import NavBar from '@/components/navbar'
 import Provider from '../Providers/provider'
 
 export const metadata: Metadata = {
-  icons: ['/favicon.webp'],
+  icons: ['/favicon.ico'],
   title: 'Abdullah Khalil',
   description:
     'Abdullah Khalil - A passionate Computer Science graduate with expertise in web development, AI, and mobile applications. Skilled in MERN stack, Next.js, GSAP, and more. Explore my portfolio to see projects in AI-driven facial recognition, hotel booking management systems, and more innovative solutions.',
