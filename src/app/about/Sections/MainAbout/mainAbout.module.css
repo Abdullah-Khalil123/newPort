@@ -1,0 +1,19 @@
+.MainAbout {
+  height: 70dvh;
+  display: flex;
+  align-items: center;
+}
+
+.MainAbout h1 {
+  font-size: 46px;
+  font-weight: 300;
+  padding: 0px var(--LR-Padding);
+  max-width: 1500px;
+}
+
+@media screen and (max-width: 768px) {
+  .MainAbout h1 {
+    padding: 0px;
+    font-size: 32px;
+  }
+}

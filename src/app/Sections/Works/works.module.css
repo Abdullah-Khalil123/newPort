@@ -1,124 +1,123 @@
 .works {
-    /* background-color: red; */
-    padding:20px var(--LR-Padding);
+  /* background-color: red; */
+  padding: 20px var(--LR-Padding);
 }
 .alignEnd {
-    /* background-color: orange; */
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 20px;
+  /* background-color: orange; */
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
 }
 .alignEnd h2 {
-    /* background-color: aqua; */
-    width: 60%;
-    max-width: 700px;
-    font-weight: 500;
-    margin-bottom: 10px;
+  /* background-color: aqua; */
+  width: 60%;
+  max-width: 700px;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 
 .works span {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .workItems {
-    /* background-color: red; */
-    min-width: 60%;
+  /* background-color: red; */
+  min-width: 60%;
 }
 .itemDisplay {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .workItem {
-
-    max-width: 700px;
-    /* min-width: 500px; */
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 15px;
-    border-bottom: 1px solid var(--grey-backgroundColor);
-    min-height: 80px;
-    transition: 0.2s linear;
-    margin-bottom: 5px;
+  max-width: 700px;
+  /* min-width: 500px; */
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 15px;
+  border-bottom: 1px solid var(--grey-backgroundColor);
+  min-height: 80px;
+  transition: 0.2s linear;
+  margin-bottom: 5px;
 }
 
 .workItem:hover {
-    background-color: rgba(184, 184, 184, 0.217);
-    border-bottom: 1px transparent solid;
-    border-radius: 10px;
+  background-color: rgba(184, 184, 184, 0.217);
+  border-bottom: 1px transparent solid;
+  border-radius: 10px;
 }
 .workItem:hover button {
-    rotate: -35deg;
+  rotate: -35deg;
 }
 .workItem p {
-    font-size: 20px;
+  font-size: 20px;
 }
 .workItem .year {
-    margin-right: 50px;
+  margin-right: 50px;
 }
 .workItem button {
-    background-color: transparent;
-    border: solid 1px var(--grey-backgroundColor);
-    height: 40px;
-    min-width: 40px;
-    border-radius: 50%;
-    margin-left: 50px;
-    position: relative;
+  background-color: transparent;
+  border: solid 1px var(--grey-backgroundColor);
+  height: 40px;
+  min-width: 40px;
+  border-radius: 50%;
+  margin-left: 50px;
+  position: relative;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    transition: 0.25s ease-in;
+  transition: 0.25s ease-in;
 }
 
 .workDisplay {
-    min-width: 200px;
-    max-width: 400px;
-    margin-left: 30px;
+  min-width: 200px;
+  max-width: 400px;
+  margin-left: 30px;
 }
 .ItemDiscrip {
-    min-height: 200px;
+  min-height: 200px;
 }
 .workDisplay .ImageHolder {
-    position: relative;
-    background-color: var(--primary-background);
-    height: 150px;
-    border-radius: 10px;
+  position: relative;
+  background-color: var(--primary-background);
+  height: 150px;
+  border-radius: 10px;
 }
 .workDisplay .bold {
-    font-weight: 600;
-    margin: 5px 0px;
+  font-weight: 600;
+  margin: 5px 0px;
 
-    white-space: nowrap;         /* Prevents the text from wrapping */
-    overflow: hidden;            /* Hides the overflowed text */
-    text-overflow: ellipsis;
+  white-space: nowrap; /* Prevents the text from wrapping */
+  overflow: hidden; /* Hides the overflowed text */
+  text-overflow: ellipsis;
 }
 .ImageHolder {
-    overflow: hidden;
-    min-height: 200px;
+  overflow: hidden;
+  min-height: 200px;
 }
 
-@media screen and (max-width: 800px){
-    .workDisplay {
-        display: none;
-    }
-    .workItems {
-        width: 100%;
-    }
-    .alignEnd {
-        justify-content: start;
-    }
-    .alignEnd h2 {
-        font-size: 20px;
-        width: 100%;
-    }
-    .workItem .year {
-        margin-right: 20px;
-    }
-    .workItem button {
-        margin-left: 20px;
-    }
-    .workItem p {
-        font-size: 16px;
-    }
+@media screen and (max-width: 800px) {
+  .workDisplay {
+    display: none;
+  }
+  .workItems {
+    width: 100%;
+  }
+  .alignEnd {
+    justify-content: start;
+  }
+  .alignEnd h2 {
+    font-size: 20px;
+    width: 100%;
+  }
+  .workItem .year {
+    margin-right: 20px;
+  }
+  .workItem button {
+    margin-left: 20px;
+  }
+  .workItem p {
+    font-size: 16px;
+  }
 }

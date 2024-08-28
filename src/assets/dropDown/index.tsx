@@ -25,7 +25,7 @@ const DropDown = ({
       <Link href={''}>
         <li>Case Studies</li>
       </Link>
-      <Link href={''}>
+      <Link href={'/about'}>
         <li>About</li>
       </Link>
       <li onClick={() => {}}>

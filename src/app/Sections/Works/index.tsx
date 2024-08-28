@@ -68,8 +68,10 @@ function WorkItem({
         setSelected(index)
       }}
     >
-      <p className={style.year}>{item.year}</p>
-      <p>{item.title}</p>
+      <div style={{ display: 'flex' }}>
+        <p className={style.year}>{item.year}</p>
+        <p>{item.title}</p>
+      </div>
       <WorkItemButton />
     </div>
   )

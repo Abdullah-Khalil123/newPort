@@ -47,7 +47,7 @@ const NavBar = () => {
           <Link href={'/archive'}>Playground</Link>
           <Link href={''}>Services</Link>
           <Link href={''}>Case Studies</Link>
-          <Link href={''}>About me</Link>
+          <Link href={'/about'}>About me</Link>
         </div>
       </div>
       <div className={style.bookings}>
