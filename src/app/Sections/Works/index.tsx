@@ -23,7 +23,7 @@ const Works = ({ items }: { items: WorkItemProps[] }) => {
         svgs[i].setAttribute('data-theme-svg', theme)
       }
     }
-  })
+  }, [])
   return (
     <div className={style.works}>
       <div className={style.alignEnd}>
