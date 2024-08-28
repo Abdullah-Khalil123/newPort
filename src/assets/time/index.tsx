@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 
 const GetTime = () => {
-  const [time, setTime] = useState<Date | undefined>()
+  const [time, setTime] = useState<Date | undefined>(undefined)
 
   useEffect(() => {
     const timerId = setInterval(() => {
