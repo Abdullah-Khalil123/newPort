@@ -1,10 +1,23 @@
+'use client'
 import Chip from '@/assets/chip'
 import style from './archive.module.css'
 import { projectData } from './staticData'
 import Image from 'next/image'
 import arrow from '@/public/arrow.svg'
 import Link from 'next/link'
+import { useEffect } from 'react'
 const Archive = () => {
+  useEffect(() => {
+    const socials = document.getElementById('socialsRef')
+    if (socials) {
+      socials.style.display = 'none'
+    }
+    return () => {
+      if (socials) {
+        socials.style.display = 'block'
+      }
+    }
+  })
   return (
     <div className={style.archive}>
       <table>
