@@ -20,7 +20,7 @@ const MainAbout = () => {
       {
         x: 0,
         opacity: 1,
-        stagger: 0.01,
+        stagger: 0.015,
         duration: 2,
         ease: 'power4.out',
       }

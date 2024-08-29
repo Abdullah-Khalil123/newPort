@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import style from './dropDown.module.css'
 import Toggle from '@/assets/Toggle'
-
+import { inter } from '@/app/layoutFont'
 const DropDown = ({
   active,
   showDropDown,
@@ -11,7 +11,9 @@ const DropDown = ({
 }) => {
   return (
     <ul
-      className={`${style.dropdown} ${active ? style.active : ''}`}
+      className={`${style.dropdown} ${inter.className} ${
+        active ? style.active : style.inActive
+      }`}
       onClick={() => {
         showDropDown(false)
       }}

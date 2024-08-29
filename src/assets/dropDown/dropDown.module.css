@@ -1,39 +1,40 @@
 .dropdown {
-    position: absolute;
-    background-color: #27272c4b;
-    list-style: none;
-    z-index: 2;
-    border-radius: 10px;
-    padding: 10px 10px 5px 10px;
-    right: 0;
-    top: calc(100% + 10px);
-    
-    transform-origin: top;
-    scale: 0.8;
-    opacity: 0;
-    pointer-events: none;
-    overflow: hidden;
-    transition: scale 0.2s ease, opacity 0.2s ease;
-    backdrop-filter: blur(10px) brightness(0.8);
-  }
-  
-  .dropdown.active {
-    opacity: 1;
-    scale: 1;
-    pointer-events: all;
-  }
-  
-  .dropdown li {
-    text-align: start;
-    padding: 8px 70px 6px 5px;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    white-space: nowrap;
-    color: white;
-    transition: 0.1s ease-in;
-  }
-  
-  .dropdown li:hover {
-    background-color: #27272c;
-  }
-  
+  position: absolute;
+  background-color: #27272c4b;
+  list-style: none;
+  z-index: 2;
+  border-radius: 10px;
+  padding: 10px 10px 5px 10px;
+  right: 0;
+  top: calc(100% + 10px);
+
+  transform-origin: top;
+  scale: 0.8;
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+  transition: scale 0.2s ease, opacity 0.2s ease;
+  backdrop-filter: blur(10px) brightness(0.8);
+}
+
+.dropdown.active {
+  opacity: 1;
+  scale: 1;
+  pointer-events: all;
+}
+.dropdown.inActive {
+  transition-delay: 0.25s;
+}
+.dropdown li {
+  text-align: start;
+  padding: 8px 70px 6px 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  color: white;
+  transition: 0.1s ease-in;
+}
+
+.dropdown li:hover {
+  background-color: #27272c;
+}
