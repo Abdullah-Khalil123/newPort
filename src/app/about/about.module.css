@@ -1,3 +1,9 @@
 .aboutPage {
-  padding: 0px var(--LR-Padding);
+  padding: 0px calc(var(--LR-Padding) * 2) 50px calc(var(--LR-Padding) * 2);
+}
+
+@media screen and (max-width: 800px) {
+  .aboutPage {
+    padding: 0px var(--LR-Padding) 50px var(--LR-Padding);
+  }
 }
