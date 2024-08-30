@@ -54,7 +54,6 @@
   position: relative;
   width: calc(40% - 60px);
   aspect-ratio: 3 / 2;
-  background-color: yellow;
 }
 
 @media screen and (max-width: 1000px) {
