@@ -74,14 +74,16 @@ const MainAbout = () => {
       </section>
       <section className={style.infoAbout}>
         <div>
-          <h2>I'm Abdullah, a developer, creator, and lifelong learner.</h2>
+          <h2>
+            I&apos;m Abdullah, a developer, creator, and lifelong learner.
+          </h2>
           <p>
             From a young age, I&apos;ve been captivated by the power of
             technology and its potential to transform the world. This
             fascination led me to explore various areas, including web
             development, artificial intelligence, and mobile app development.
-            Whether it's coding with JavaScript, crafting user interfaces, or
-            building smart algorithms, I thrive on turning complex challenges
+            Whether it&apos;s coding with JavaScript, crafting user interfaces,
+            or building smart algorithms, I thrive on turning complex challenges
             into innovative solutions.
           </p>
 
@@ -91,10 +93,10 @@ const MainAbout = () => {
             make a difference.&quot;
           </p>
           <p>
-            I don't just aim to create—I'm driven by the desire to solve real
-            problems, to innovate, and to bring ideas to life that matter. For
-            me, it's about more than just code or design—it's about creating
-            value and making a positive impact.
+            I don&apos;t just aim to create—I&apos;m driven by the desire to
+            solve real problems, to innovate, and to bring ideas to life that
+            matter. For me, it&apos;s about more than just code or
+            design—it&apos;s about creating value and making a positive impact.
           </p>
         </div>
         <div className={style.ImageHolder} ref={boxRef}></div>
@@ -123,13 +125,13 @@ const MainAbout = () => {
         <h3>Acknowledgments</h3>
         <p>
           I owe much of my growth to the collaborative spirit of the tech
-          community. Every project has been a learning experience, and I'm
+          community. Every project has been a learning experience, and I&apos;m
           grateful for the support and inspiration from fellow developers,
           mentors, and friends who have been part of my journey.
         </p>
         <h3>Contact Me</h3>
         <p>
-          I'm always open to new opportunities, collaborations, and
+          I&apos;m always open to new opportunities, collaborations, and
           conversations. Reach out, and let&apos;s make something amazing
           together!
         </p>
