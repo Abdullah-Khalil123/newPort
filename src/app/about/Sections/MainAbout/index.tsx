@@ -1,22 +1,28 @@
 'use client'
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import style from './mainAbout.module.css'
 import SplitType from 'split-type'
 import gsap from 'gsap'
 import Button from '@/assets/button'
 import { timesNewRoman } from '@/app/layoutFont'
 import { useRouter } from 'next/navigation'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
+gsap.registerPlugin(ScrollTrigger)
 const MainAbout = () => {
   const router = useRouter()
+  const boxRef = useRef(null)
   useEffect(() => {
     new SplitType('h1#aboutMainText')
 
     window.addEventListener('resize', () => {
       new SplitType('h1#aboutMainText')
     })
-    gsap.fromTo(
-      '.word',
+
+    const t1 = gsap.timeline([])
+
+    t1.fromTo(
+      '.line',
       {
         opacity: 0,
         x: -10,
@@ -24,9 +30,28 @@ const MainAbout = () => {
       {
         x: 0,
         opacity: 1,
-        stagger: 0.015,
+        stagger: 0.05,
         duration: 2,
         ease: 'power4.out',
+      }
+    )
+    gsap.fromTo(
+      boxRef.current,
+      {
+        y: 0,
+      },
+      {
+        y: 50,
+        scrollTrigger: {
+          trigger: boxRef.current,
+          pin: true,
+          pinSpacing: false,
+          markers: true,
+          start: 'top 40%',
+          end: `bottom 10%`,
+          scrub: true,
+          toggleActions: 'play reverse none none',
+        },
       }
     )
 
@@ -48,41 +73,44 @@ const MainAbout = () => {
         </h1>
       </section>
       <section className={style.infoAbout}>
-        <h2>I'm Abdullah, a developer, creator, and lifelong learner.</h2>
-        <p>
-          From a young age, I’ve been captivated by the power of technology and
-          its potential to transform the world. This fascination led me to
-          explore various areas, including web development, artificial
-          intelligence, and mobile app development. Whether it's coding with
-          JavaScript, crafting user interfaces, or building smart algorithms, I
-          thrive on turning complex challenges into innovative solutions.
-        </p>
-        {/* <p>
+        <div>
+          <h2>I'm Abdullah, a developer, creator, and lifelong learner.</h2>
+          <p>
+            From a young age, I’ve been captivated by the power of technology
+            and its potential to transform the world. This fascination led me to
+            explore various areas, including web development, artificial
+            intelligence, and mobile app development. Whether it's coding with
+            JavaScript, crafting user interfaces, or building smart algorithms,
+            I thrive on turning complex challenges into innovative solutions.
+          </p>
+          {/* <p>
           Today, my journey has brought me through numerous projects—from
           developing an AI-driven facial recognition system to building
           interactive web applications and creating Bluetooth-based indoor
           positioning solutions. Every project has taught me something new, and
           I’m always eager to learn and grow.
-        </p> */}
-        {/* <p>
+          </p> */}
+          {/* <p>
           What excites me most is the ability to create technology that has a
           meaningful impact. I believe in building solutions that are not just
           technically sound, but also user-centric and impactful. Whether it’s
           developing a seamless user experience for a web app, enhancing
           accessibility, or optimizing performance, my goal is to make
           technology that improves lives.
-        </p> */}
-        <p>One of my guiding philosophies is:</p>
-        <p className={`${style.quote} ${timesNewRoman.className}`}>
-          "Innovation begins with curiosity and is fueled by the drive to make a
-          difference."
-        </p>
-        <p>
-          I don't just aim to create—I'm driven by the desire to solve real
-          problems, to innovate, and to bring ideas to life that matter. For me,
-          it's about more than just code or design—it's about creating value and
-          making a positive impact.
-        </p>
+          </p> */}
+          <p>One of my guiding philosophies is:</p>
+          <p className={`${style.quote} ${timesNewRoman.className}`}>
+            "Innovation begins with curiosity and is fueled by the drive to make
+            a difference."
+          </p>
+          <p>
+            I don't just aim to create—I'm driven by the desire to solve real
+            problems, to innovate, and to bring ideas to life that matter. For
+            me, it's about more than just code or design—it's about creating
+            value and making a positive impact.
+          </p>
+        </div>
+        <div className={style.ImageHolder} ref={boxRef}></div>
       </section>
       <section className={style.bullets}>
         <h3>Experience</h3>

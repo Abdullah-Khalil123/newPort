@@ -34,6 +34,16 @@
   font-size: 48px;
 }
 
+.infoAbout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.ImageHolder {
+  background-color: yellow;
+  height: 500px;
+  aspect-ratio: 3 / 2;
+}
 @media screen and (max-width: 1000px) {
   .MainAbout {
     min-height: calc(100dvh - 80px);
