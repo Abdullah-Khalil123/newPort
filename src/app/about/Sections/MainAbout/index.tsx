@@ -66,42 +66,29 @@ const MainAbout = () => {
     <div className={style.aboutText}>
       <section className={style.MainAbout}>
         <h1 id="aboutMainText">
-          I’m a digital creator who loves turning wild ideas into beautiful,
-          functional code. When I’m not coding, I’m exploring new tech trends or
-          brewing the perfect cup of coffee. Let’s make something amazing
-          together!
+          I&apos;m a digital creator who loves turning wild ideas into
+          beautiful, functional code. When I&apos;m not coding, I&apos;m
+          exploring new tech trends or brewing the perfect cup of coffee.
+          Let&apos;s make something amazing together!
         </h1>
       </section>
       <section className={style.infoAbout}>
         <div>
           <h2>I'm Abdullah, a developer, creator, and lifelong learner.</h2>
           <p>
-            From a young age, I’ve been captivated by the power of technology
-            and its potential to transform the world. This fascination led me to
-            explore various areas, including web development, artificial
-            intelligence, and mobile app development. Whether it's coding with
-            JavaScript, crafting user interfaces, or building smart algorithms,
-            I thrive on turning complex challenges into innovative solutions.
+            From a young age, I&apos;ve been captivated by the power of
+            technology and its potential to transform the world. This
+            fascination led me to explore various areas, including web
+            development, artificial intelligence, and mobile app development.
+            Whether it's coding with JavaScript, crafting user interfaces, or
+            building smart algorithms, I thrive on turning complex challenges
+            into innovative solutions.
           </p>
-          {/* <p>
-          Today, my journey has brought me through numerous projects—from
-          developing an AI-driven facial recognition system to building
-          interactive web applications and creating Bluetooth-based indoor
-          positioning solutions. Every project has taught me something new, and
-          I’m always eager to learn and grow.
-          </p> */}
-          {/* <p>
-          What excites me most is the ability to create technology that has a
-          meaningful impact. I believe in building solutions that are not just
-          technically sound, but also user-centric and impactful. Whether it’s
-          developing a seamless user experience for a web app, enhancing
-          accessibility, or optimizing performance, my goal is to make
-          technology that improves lives.
-          </p> */}
+
           <p>One of my guiding philosophies is:</p>
           <p className={`${style.quote} ${timesNewRoman.className}`}>
-            "Innovation begins with curiosity and is fueled by the drive to make
-            a difference."
+            &quot;Innovation begins with curiosity and is fueled by the drive to
+            make a difference.&quot;
           </p>
           <p>
             I don't just aim to create—I'm driven by the desire to solve real
@@ -125,8 +112,8 @@ const MainAbout = () => {
           - Developed an AI-based facial recognition system using TensorFlow
         </p>
         <p>
-          - Created a university map using Dijkstra’s algorithm for shortest
-          path calculations
+          - Created a university map using Dijkstra&apos;s algorithm for
+          shortest path calculations
         </p>
         <p> - Built a food delivery system with Flutter and Firebase</p>
         <p>
@@ -143,7 +130,8 @@ const MainAbout = () => {
         <h3>Contact Me</h3>
         <p>
           I'm always open to new opportunities, collaborations, and
-          conversations. Reach out, and let’s make something amazing together!
+          conversations. Reach out, and let&apos;s make something amazing
+          together!
         </p>
         <Button
           text={'Contact Me'}
