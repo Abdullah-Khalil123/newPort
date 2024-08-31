@@ -1,20 +1,12 @@
 'use client'
-import { CSSProperties, useRef, useState } from 'react'
+
+import { CSSProperties } from 'react'
 import style from './toggle.module.css'
-import { handleClick, handleTheme } from './togglehandler'
+import useThemeToggle from './useThemeToggle'
 
 const Toggle = ({ styles }: { styles?: CSSProperties }) => {
-  const [isActive, setActive] = useState<boolean>(false)
-  const boxRef = useRef<HTMLDivElement>(null)
+  const { isActive, boxRef, toggleActive } = useThemeToggle()
   const theamModes = ['Dark Mode', 'Light Mode']
-  const toggleActive = () => {
-    setActive((prevActive) => {
-      localStorage.setItem('theme', prevActive ? 'light' : 'dark')
-      handleClick(boxRef, !prevActive)
-      handleTheme(prevActive)
-      return !isActive
-    })
-  }
 
   return (
     <div className={style.toggle} style={styles} onClick={toggleActive}>

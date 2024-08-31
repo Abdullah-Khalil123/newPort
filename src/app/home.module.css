@@ -1,0 +1,13 @@
+.NotFound {
+  padding: 0px var(--LR-Padding);
+  display: flex;
+  height: 50vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.NotFound a {
+  text-decoration: underline;
+}
