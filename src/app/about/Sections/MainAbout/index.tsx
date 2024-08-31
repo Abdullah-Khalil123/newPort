@@ -8,7 +8,8 @@ import { timesNewRoman } from '@/app/layoutFont'
 import { useRouter } from 'next/navigation'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import scrollImage from '@/public/pexels-photo-3113541.jpeg'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
+import skills from '../../utils/skills'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -42,14 +43,13 @@ const MainAbout = () => {
       }
     )
 
-    if (hasRendered) {
+    if (hasRendered && boxRef.current) {
       gsap.to(boxRef.current, {
         scrollTrigger: {
           trigger: boxRef.current,
           start: 'top 80',
-          end: '+=100 0',
+          end: `+=${boxRef.current?.offsetHeight * 3} 0`,
           pin: true,
-          scrub: true,
         },
       })
     }
@@ -60,6 +60,13 @@ const MainAbout = () => {
       })
     }
   }, [hasRendered])
+
+  useEffect(() => {})
+
+  const pdfUrl = '/Resume.pdf'
+  const openPdfInNewTab = () => {
+    window.open(pdfUrl, '_blank', 'noopener,noreferrer')
+  }
 
   return (
     <div className={style.aboutText}>
@@ -150,6 +157,16 @@ const MainAbout = () => {
               }}
             />
             <h3>Skills</h3>
+            <div className={style.MySkills}>
+              {skills.map((skill) => (
+                <MySkill
+                  title={skill.title}
+                  sub={skill.sub}
+                  img={skill.img}
+                  key={skill.title}
+                />
+              ))}
+            </div>
             <Button
               text={'My Resume'}
               styles={{
@@ -159,12 +176,33 @@ const MainAbout = () => {
                 fontSize: '20px',
                 border: '2px solid white',
               }}
+              onClick={openPdfInNewTab}
             />
           </section>
         </div>
         <div className={style.ImageHolder} ref={boxRef}>
           <Image src={scrollImage} fill alt={''}></Image>
         </div>
+      </div>
+    </div>
+  )
+}
+
+const MySkill = ({
+  img,
+  title,
+  sub,
+}: {
+  img: StaticImageData | string
+  title: string
+  sub: string
+}) => {
+  return (
+    <div className={style.MySkill}>
+      <Image src={img} alt={'Skill Image'} height={40} width={40} />
+      <div className={style.SkillData}>
+        <p className={style.title}>{title}</p>
+        <p className={style.sub}>{sub}</p>
       </div>
     </div>
   )

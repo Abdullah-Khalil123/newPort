@@ -56,6 +56,48 @@
   aspect-ratio: 3 / 2;
 }
 
+.MySkills {
+  padding: 20px 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.MySkill {
+  min-width: 200px;
+
+  padding: 5px 10px;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+  border: solid 1px var(--border-color);
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+.MySkill:hover {
+  background-color: rgba(129, 129, 129, 0.185);
+}
+
+.MySkill img {
+  background-color: var(--dark-enhance);
+  padding: 5px;
+  border-radius: 8px;
+  margin-right: 8px;
+}
+
+.MySkill .title {
+  font-weight: 800;
+}
+
+.MySkill .sub {
+  opacity: 0.8;
+}
+
 @media screen and (max-width: 1000px) {
   .MainAbout {
     min-height: calc(100dvh - 80px);

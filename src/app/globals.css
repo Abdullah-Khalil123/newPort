@@ -5,6 +5,10 @@
 
   --grey-backgroundColor: #464646;
   --grey-textColor: #8f8f8e;
+
+  --dark-enhance: rgba(27, 27, 27, 0.164);
+
+  --border-color: rgba(0, 0, 0, 0.288);
 }
 
 [data-theme='dark'] {
@@ -13,6 +17,10 @@
   --grey-backgroundColor: #363733;
   background-color: var(--primary-background);
   color: white;
+
+  --dark-enhance: rgba(211, 211, 211, 0.295);
+
+  --border-color: rgba(197, 197, 197, 0.151);
 }
 
 [data-theme-svg='dark'] {

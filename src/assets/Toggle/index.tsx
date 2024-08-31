@@ -1,5 +1,5 @@
 'use client'
-import { CSSProperties, useEffect, useRef, useState } from 'react'
+import { CSSProperties, useRef, useState } from 'react'
 import style from './toggle.module.css'
 import { handleClick, handleTheme } from './togglehandler'
 
