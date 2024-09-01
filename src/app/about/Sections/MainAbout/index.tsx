@@ -16,6 +16,7 @@ gsap.registerPlugin(ScrollTrigger)
 const MainAbout = () => {
   const router = useRouter()
   const boxRef = useRef<HTMLDivElement>(null)
+  const textRef = useRef<HTMLDivElement>(null)
 
   const [hasRendered, setHasRendered] = useState(false)
   useEffect(() => {
@@ -43,12 +44,12 @@ const MainAbout = () => {
       }
     )
 
-    if (hasRendered && boxRef.current) {
+    if (hasRendered && boxRef.current && textRef.current) {
       gsap.to(boxRef.current, {
         scrollTrigger: {
           trigger: boxRef.current,
           start: 'top 80',
-          end: `+=${boxRef.current?.offsetHeight * 3} 0`,
+          end: `+=${textRef.current?.offsetHeight} 0`,
           pin: true,
         },
       })
@@ -79,7 +80,7 @@ const MainAbout = () => {
         </h1>
       </section>
       <div className={style.FlexImage}>
-        <div className={style.bottomPart}>
+        <div className={style.bottomPart} ref={textRef}>
           <section className={style.infoAbout}>
             <div>
               <h2>

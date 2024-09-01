@@ -3,6 +3,7 @@ import { inter } from '@/app/layoutFont'
 import './globals.css'
 import NavBar from '@/components/navbar'
 import Provider from '../Providers/provider'
+import ThemeProvider from '@/Providers/themeProvider'
 
 export const metadata: Metadata = {
   icons: ['/favicon.ico'],
@@ -18,8 +19,10 @@ function RootLayout({ children }: Readonly<RootInterface>) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <NavBar />
-        <Provider>{children}</Provider>
+        <ThemeProvider>
+          <NavBar />
+          <Provider>{children}</Provider>
+        </ThemeProvider>
       </body>
     </html>
   )
