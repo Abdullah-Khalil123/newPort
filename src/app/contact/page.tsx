@@ -50,22 +50,7 @@ const ContactMe = () => {
         <section>
           <h4>Chat with me</h4>
           <p>Im here to help</p>
-          <a
-            href=""
-            onClick={(e) => {
-              e.preventDefault() // Prevent the default link behavior
-
-              const email = 'abdullah.khalil123321@gmail.com'
-              navigator.clipboard
-                .writeText(email)
-                .then(() => {
-                  alert('Email copied to clipboard!')
-                })
-                .catch((err) => {
-                  console.error('Failed to copy: ', err)
-                })
-            }}
-          >
+          <a href="mailto:abdullah.khalil123321@gmail.com">
             abdullah.khalil123321@gmail.com
           </a>
         </section>
@@ -102,7 +87,7 @@ const ContactMe = () => {
                 href={'https://www.linkedin.com/in/abdullah-k-b6083722b/'}
                 target="blank"
               >
-                <Image src={linkedIn} alt={''} fill />
+                <Image src={linkedIn} alt={''} fill style={{ scale: '1.4' }} />
               </Link>
             </div>
           </div>
@@ -217,7 +202,11 @@ const Forms = () => {
       </div>
       <Button
         text={'Send Message'}
-        styles={{ width: '100%', backgroundColor: '#6f86d6', height: '40px' }}
+        styles={{
+          width: '100%',
+          backgroundColor: '#6f86d6',
+          height: '40px',
+        }}
         onClick={() => {}}
       />
     </form>
