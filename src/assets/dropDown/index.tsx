@@ -21,11 +21,11 @@ const DropDown = ({
       <Link href={'/archive'}>
         <li>Playground</li>
       </Link>
-      <Link href={'/services'}>
+      {/* <Link href={'/services'}>
         <li>Services</li>
-      </Link>
-      <Link href={'/case-studies'}>
-        <li>Case Studies</li>
+      </Link> */}
+      <Link href={'/contact'}>
+        <li>Contact</li>
       </Link>
       <Link href={'/about'}>
         <li>About</li>

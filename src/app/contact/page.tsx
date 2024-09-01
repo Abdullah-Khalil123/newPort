@@ -136,6 +136,8 @@ const Forms = () => {
     mutationFn: sendContact,
   })
 
+  useEffect(() => document.querySelector('textarea')?.focus())
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     try {
@@ -173,7 +175,7 @@ const Forms = () => {
       />
       <Input
         title={'Email'}
-        placeholder={'abc@email.com'}
+        placeholder={'alexregan@gmail.com'}
         required={true}
         name="email"
         onChange={setcontactData}
