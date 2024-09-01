@@ -3,8 +3,8 @@
 import { CSSProperties, useEffect, useState } from 'react'
 import style from './toggle.module.css'
 import useThemeToggle from './useThemeToggle'
-import { handleClick } from './togglehandler'
-
+import { handleClick, handleTheme } from './togglehandler'
+import gsap from 'gsap'
 const Toggle = ({ styles }: { styles?: CSSProperties }) => {
   const { isActive, boxRef, toggleActive, setActive } = useThemeToggle()
   const [isMounted, setIsMounted] = useState(false)
@@ -13,8 +13,11 @@ const Toggle = ({ styles }: { styles?: CSSProperties }) => {
   useEffect(() => {
     if (localStorage.getItem('theme') == 'dark') {
       if (boxRef != null) {
-        handleClick(boxRef, true)
+        // handleClick(boxRef, true)
+        gsap.to(boxRef.current, { x: isActive ? 24 : 0, duration: 0.2 })
+
         setActive(true)
+        handleTheme(false)
       }
     }
     setIsMounted(true)
