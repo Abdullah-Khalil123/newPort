@@ -4,6 +4,7 @@ import './globals.css'
 import NavBar from '@/components/navbar'
 import Provider from '../Providers/provider'
 import ThemeProvider from '@/Providers/themeProvider'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 export const metadata: Metadata = {
   icons: ['/favicon.ico'],
@@ -19,6 +20,7 @@ function RootLayout({ children }: Readonly<RootInterface>) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <SpeedInsights />
         <ThemeProvider>
           <NavBar />
           <Provider>{children}</Provider>
