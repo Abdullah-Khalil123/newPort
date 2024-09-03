@@ -1,0 +1,53 @@
+.playground table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.playground table th {
+  text-align: start;
+  border-bottom: solid 1px var(--negative-background);
+  padding: 10px var(--LR-Padding);
+}
+
+.PlaygroundItemRow td {
+  padding: 10px var(--LR-Padding);
+  font-size: 24px;
+
+  border-bottom: solid 1px var(--negative-background);
+}
+
+.PlaygroundItemRow {
+  position: relative;
+}
+.PlaygroundItemRow::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--negative-background);
+  transform: scaleY(0);
+  transition: 0.4s;
+  z-index: -1;
+}
+.PlaygroundItemRow:hover::after {
+  transform: scaleY(1);
+}
+
+.PlaygroundItemRow:hover {
+  color: var(--primary-background);
+  cursor: pointer;
+}
+
+.ImageHolderPlayground {
+  position: absolute;
+
+  height: 500px;
+  width: 600px;
+
+  right: 30px;
+  top: 25%;
+  opacity: 0;
+
+  pointer-events: none;
+}

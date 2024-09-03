@@ -35,6 +35,14 @@ const DropDown = ({
         <li>Contact</li>
       </Link>
       <Link
+        href={'/playground'}
+        onClick={() => {
+          showDropDown(false)
+        }}
+      >
+        <li>Playground</li>
+      </Link>
+      <Link
         href={'/about'}
         onClick={() => {
           showDropDown(false)

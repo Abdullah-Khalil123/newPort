@@ -20,7 +20,6 @@ const useThemeToggle = () => {
     boxRef,
     setActive,
     toggleActive,
-    handleClick,
   }
 }
 

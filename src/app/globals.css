@@ -3,6 +3,8 @@
   --primary-background: #f5f5f0;
   --secondary-background: #f5f5f0;
 
+  --negative-background: #010409;
+
   --grey-backgroundColor: #464646;
   --grey-textColor: #8f8f8e;
 
@@ -17,6 +19,8 @@
   --grey-backgroundColor: #363733;
   background-color: var(--primary-background);
   color: white;
+
+  --negative-background: #f5f5f0;
 
   --dark-enhance: rgba(211, 211, 211, 0.295);
 

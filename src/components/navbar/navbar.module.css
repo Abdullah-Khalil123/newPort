@@ -23,7 +23,7 @@
 .links {
   display: flex;
   justify-content: space-around;
-  min-width: 300px;
+  min-width: 400px;
 }
 .locAndTime {
   /* background-color: red; */
