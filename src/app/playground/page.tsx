@@ -2,10 +2,11 @@
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react'
 import style from './playground.module.css'
 import gsap from 'gsap'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
 import image1 from '@/public/pexels-photo-3113541.jpeg'
 import image2 from '@/public/WorkImages/horizon.png'
+import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 
 const Playground = () => {
   useEffect(() => {
@@ -22,6 +23,43 @@ const Playground = () => {
   }, []) // Add an empty dependency array to only run on mount and unmount
 
   const images = [image1, image2]
+
+  const playgroundData: {
+    date: string
+    project: string
+    type: string
+    link: string
+    image: StaticImport | string
+  }[] = [
+    {
+      date: 'NAN',
+      project: 'NAN',
+      type: 'NAN',
+      link: 'NAN',
+      image: image1,
+    },
+    {
+      date: 'NAN',
+      project: 'NAN',
+      type: 'NAN',
+      link: 'NAN',
+      image: image2,
+    },
+    {
+      date: 'NAN',
+      project: 'NAN',
+      type: 'NAN',
+      link: 'NAN',
+      image: '',
+    },
+    {
+      date: 'NAN',
+      project: 'NAN',
+      type: 'NAN',
+      link: 'NAN',
+      image: '',
+    },
+  ]
 
   const typeRef = useRef<HTMLTableHeaderCellElement>(null)
   const imageRef = useRef<HTMLDivElement>(null)
@@ -65,12 +103,12 @@ const Playground = () => {
             })
           }}
         >
-          {[...Array(20)].map((_, index) => (
+          {playgroundData.map((item, index) => (
             <PlaygroundItem
               key={index}
-              date={'2024'}
-              item={'Scroll Animation'}
-              type={'GSAP SCROLL'}
+              date={item.date}
+              item={item.project}
+              type={item.type}
               index={index}
               selectFunction={setSelected}
             />
@@ -78,16 +116,19 @@ const Playground = () => {
         </tbody>
       </table>
       <div className={style.ImageHolderPlayground} ref={imageRef}>
-        {images.map((image, index) =>
+        {playgroundData.map((item, index) =>
           selected.index === index ? (
-            <Image
-              src={image}
-              alt=""
-              key={index}
-              objectFit="contain"
-              fill
-              ref={animateImage}
-            />
+            item.image != '' ? (
+              <Image
+                src={item.image}
+                alt=""
+                key={index}
+                objectFit="contain"
+                fill
+                priority
+                ref={animateImage}
+              />
+            ) : null
           ) : null
         )}
       </div>
