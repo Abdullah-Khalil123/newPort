@@ -22,9 +22,6 @@
   scale: 1;
   pointer-events: all;
 }
-.dropdown.inActive {
-  transition-delay: 0.25s;
-}
 .dropdown li {
   text-align: start;
   padding: 8px 70px 6px 5px;

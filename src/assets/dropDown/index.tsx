@@ -14,23 +14,35 @@ const DropDown = ({
       className={`${style.dropdown} ${inter.className} ${
         active ? style.active : style.inActive
       }`}
-      onClick={() => {
-        showDropDown(false)
-      }}
     >
-      <Link href={'/archive'}>
+      <Link
+        href={'/archive'}
+        onClick={() => {
+          showDropDown(false)
+        }}
+      >
         <li>Projects</li>
       </Link>
       {/* <Link href={'/services'}>
         <li>Services</li>
       </Link> */}
-      <Link href={'/contact'}>
+      <Link
+        href={'/contact'}
+        onClick={() => {
+          showDropDown(false)
+        }}
+      >
         <li>Contact</li>
       </Link>
-      <Link href={'/about'}>
+      <Link
+        href={'/about'}
+        onClick={() => {
+          showDropDown(false)
+        }}
+      >
         <li>About</li>
       </Link>
-      <li onClick={() => {}}>
+      <li>
         <Toggle />
       </li>
     </ul>
