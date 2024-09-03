@@ -19,7 +19,7 @@ const DropDown = ({
       }}
     >
       <Link href={'/archive'}>
-        <li>Playground</li>
+        <li>Projects</li>
       </Link>
       {/* <Link href={'/services'}>
         <li>Services</li>
