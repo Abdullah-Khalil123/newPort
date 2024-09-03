@@ -30,12 +30,14 @@ const Playground = () => {
 
   useEffect(() => {
     // Animate the current image out
-    if (animateImage.current) {
-      gsap.fromTo(
-        animateImage.current,
-        { opacity: 0.4, scale: 0.9 },
-        { opacity: 1, scale: 1, duration: 0.5 }
-      )
+    if (window.innerWidth >= 800) {
+      if (animateImage.current) {
+        gsap.fromTo(
+          animateImage.current,
+          { opacity: 0.4, scale: 0.9 },
+          { opacity: 1, scale: 1, duration: 0.5 }
+        )
+      }
     }
   }, [selected]) // Re-run this effect when 'selected' changes
 
