@@ -40,7 +40,7 @@
 }
 
 .ImageHolderPlayground {
-  position: absolute;
+  position: fixed;
 
   height: 500px;
   width: 600px;
@@ -54,6 +54,10 @@
 
 @media screen and (max-width: 800px) {
   .ImageHolderPlayground {
-    display: none;
+    position: fixed;
+    width: 80vw;
+    height: 300px;
+    right: 20px;
+    top: calc(100% - 350px);
   }
 }

@@ -65,7 +65,7 @@ const Playground = () => {
             })
           }}
         >
-          {[...Array(images.length)].map((_, index) => (
+          {[...Array(20)].map((_, index) => (
             <PlaygroundItem
               key={index}
               date={'2024'}
