@@ -2,10 +2,11 @@
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react'
 import style from './playground.module.css'
 import gsap from 'gsap'
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 
 import image1 from '@/public/pexels-photo-3113541.jpeg'
 import image2 from '@/public/WorkImages/horizon.png'
+import image3 from '@/public/WorkImages/Exclusive.png'
 import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 
 const Playground = () => {
@@ -22,8 +23,6 @@ const Playground = () => {
     }
   }, []) // Add an empty dependency array to only run on mount and unmount
 
-  const images = [image1, image2]
-
   const playgroundData: {
     date: string
     project: string
@@ -32,33 +31,33 @@ const Playground = () => {
     image: StaticImport | string
   }[] = [
     {
-      date: 'NAN',
-      project: 'NAN',
-      type: 'NAN',
+      date: 'Augest 2024',
+      project: 'Portfolio',
+      type: 'Portfolio',
       link: 'NAN',
       image: image1,
     },
     {
-      date: 'NAN',
-      project: 'NAN',
-      type: 'NAN',
-      link: 'NAN',
+      date: 'April 2024',
+      project: 'Horizon',
+      type: 'Front End',
+      link: 'https://horizon-web-works.firebaseapp.com/',
       image: image2,
     },
     {
-      date: 'NAN',
-      project: 'NAN',
-      type: 'NAN',
-      link: 'NAN',
-      image: '',
+      date: 'Feburary 2024',
+      project: 'Exclusive',
+      type: 'E Commerce',
+      link: 'https://exclusive-zeta.vercel.app/',
+      image: image3,
     },
-    {
-      date: 'NAN',
-      project: 'NAN',
-      type: 'NAN',
-      link: 'NAN',
-      image: '',
-    },
+    // {
+    //   date: 'NAN',
+    //   project: 'NAN',
+    //   type: 'NAN',
+    //   link: 'NAN',
+    //   image: '',
+    // },
   ]
 
   const typeRef = useRef<HTMLTableHeaderCellElement>(null)
