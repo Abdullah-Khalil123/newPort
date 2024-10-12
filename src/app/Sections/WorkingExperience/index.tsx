@@ -30,60 +30,61 @@ const WorkExper: WorkExperProps[] = [
   {
     icon: building,
     year: 2024,
-    title: 'Personal Budget Tracker',
+    title: 'Fiverr',
     description:
-      'Developed a web application to help users track and manage their personal finances. The application allows users to input income and expenses, categorize them, and generate financial reports.',
+      'Developed various web and mobile applications for clients on Fiverr, providing customized solutions based on their requirements.',
     technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
-    role: 'Full-stack Developer',
+    role: 'Freelancer',
     challenges:
-      'Implemented user authentication and real-time data updates using WebSocket.',
+      'Met tight deadlines and customized solutions to fit diverse client needs while maintaining code quality and functionality.',
     outcome:
-      'Successfully deployed the application and received positive feedback from users for its intuitive interface.',
-    link: 'https://github.com/yourusername/personal-budget-tracker',
+      'Successfully delivered projects with positive client feedback and repeat business, helping clients improve their operations.',
+    link: 'https://www.fiverr.com/abdullahkhalil6',
   },
   {
     icon: code,
     year: 2023,
-    title: 'Open Source Contributor',
+    title: 'Local Projects',
     description:
-      'Contributed to an open-source project by fixing bugs and improving documentation.',
-    technologies: ['JavaScript', 'Git'],
-    role: 'Contributor',
+      'Worked on local software projects, building solutions like a food delivery system and a hotel booking management system for small businesses.',
+    technologies: ['Flutter', 'Firebase', 'Next.js', 'MySQL'],
+    role: 'Full-stack Developer',
     challenges:
-      'Worked on resolving issues related to performance optimization.',
-    outcome: "Helped improve the project's stability and usability.",
-    link: 'https://github.com/opensourceproject/repository',
-  },
-  {
-    icon: debug,
-    year: 2023,
-    title: 'Software Development Intern',
-    organization: 'Tech Innovators Inc.',
-    duration: 'June 2023 - August 2023',
-    description:
-      'Assisted in developing and testing web applications. Worked closely with the development team to implement new features and fix bugs.',
-    technologies: ['JavaScript', 'HTML', 'CSS', 'Node.js'],
-    role: 'Intern',
+      'Managed full project lifecycles, from initial requirements gathering to deployment, and solved real-world business challenges for local businesses.',
     outcome:
-      'Gained hands-on experience in software development and contributed to several key projects.',
-    link: 'https://www.techinnovators.com',
-    challenges: '',
+      'Delivered reliable and scalable solutions, contributing to business growth by automating key processes and enhancing customer experiences.',
+    link: 'https://github.com/Abdullah-Khalil123',
   },
-  {
-    icon: rocket,
-    year: 2022,
-    title: 'Hackathon Winner',
-    event: 'CodeFest 2022',
-    project: 'Smart City Dashboard',
-    description:
-      'Developed a dashboard application for smart city management, integrating real-time data from various sensors and providing actionable insights.',
-    technologies: ['React', 'Django', 'PostgreSQL'],
-    role: 'Lead Developer',
-    outcome:
-      'Won first place in the competition for the innovative use of data and user interface design.',
-    link: 'https://www.codefest2022.com/smart-city-dashboard',
-    challenges: '',
-  },
+  // {
+  //   icon: debug,
+  //   year: 2023,
+  //   title: 'Software Development Intern',
+  //   organization: 'Tech Innovators Inc.',
+  //   duration: 'June 2023 - August 2023',
+  //   description:
+  //     'Assisted in developing and testing web applications. Worked closely with the development team to implement new features and fix bugs.',
+  //   technologies: ['JavaScript', 'HTML', 'CSS', 'Node.js'],
+  //   role: 'Intern',
+  //   outcome:
+  //     'Gained hands-on experience in software development and contributed to several key projects.',
+  //   link: 'https://www.techinnovators.com',
+  //   challenges: '',
+  // },
+  // {
+  //   icon: rocket,
+  //   year: 2022,
+  //   title: 'Hackathon Winner',
+  //   event: 'CodeFest 2022',
+  //   project: 'Smart City Dashboard',
+  //   description:
+  //     'Developed a dashboard application for smart city management, integrating real-time data from various sensors and providing actionable insights.',
+  //   technologies: ['React', 'Django', 'PostgreSQL'],
+  //   role: 'Lead Developer',
+  //   outcome:
+  //     'Won first place in the competition for the innovative use of data and user interface design.',
+  //   link: 'https://www.codefest2022.com/smart-city-dashboard',
+  //   challenges: '',
+  // },
 ]
 
 const WorkingExperience = () => {
